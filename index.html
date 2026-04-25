@@ -145,14 +145,11 @@
   </div><!-- /scroll-driver -->
 
   <!-- GSAP + ScrollTrigger (animation engine + scroll binding) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-    integrity="sha512-7eHRwcbYkK4d9d/6tD8X0A7VVNK2hnZMl+tDhq7jOdLvLMJnUCLJFzVGKzn2/kxWG8xhBuvC0I9XaROTbBEw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-    integrity="sha512-onMTgtzQieve3FnhEJyXMBmGBkCPMHLf9OEFajSERZx3ckFKniJUBDzASbHV7ssPMlNGfsTmSPTRc0ur7IVGA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- Lenis smooth scroll -->
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <!-- No SRI hash — hashes must be verified against actual file; wrong hash blocks the script entirely -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous"></script>
+  <!-- Lenis smooth scroll (confirmed stable release) -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   <!-- Portfolio scripts -->
   <script src="js/main.js"></script>
   <script src="js/transition.js"></script>

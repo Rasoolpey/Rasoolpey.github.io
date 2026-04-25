@@ -62,6 +62,8 @@
     });
   });
   gsap.set(edgeEl, { opacity: 0 });
+  // Signal CSS that GSAP is live — removes the no-JS visibility:hidden fallback
+  document.body.classList.add('gsap-ready');
 
   /* ----- Master timeline -----
    * Each slot occupies duration 1.0.

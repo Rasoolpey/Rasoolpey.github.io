@@ -37,6 +37,16 @@
   -webkit-backface-visibility: hidden;
 }
 
+/* Hide layers 2–5 immediately so they don't flash visible before JS applies rotateX.
+   GSAP's gsap.set() overrides this as soon as the script runs. */
+.layer:not(.layer--l1) {
+  visibility: hidden;
+}
+/* Once GSAP touches an element it adds inline style; we use that signal via .gsap-ready on body */
+body.gsap-ready .layer {
+  visibility: visible;
+}
+
 /* Per-layer background tints */
 .layer--l1 { background-color: var(--l1-bg); }
 .layer--l2 { background-color: var(--l2-bg); }

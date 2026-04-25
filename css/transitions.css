@@ -25,10 +25,12 @@
   top: 0;
   width: 100%;
   height: 100vh;
-  overflow: hidden;           /* clips layers during rotation so they don't overhang */
+  /* NOTE: NO overflow:hidden here — it forces transform-style:flat which kills 3D rotateX.
+     Horizontal overflow is already clipped by body { overflow-x: hidden } in base.css. */
 
-  /* 3D camera — perspective on the parent of rotating children */
-  perspective: 80rem;
+  /* 3D camera — perspective on the parent of rotating children.
+     140rem = 1400px: wide enough for natural-looking, non-extreme foreshortening. */
+  perspective: 140rem;
   perspective-origin: 50% 50%;
 }
 
