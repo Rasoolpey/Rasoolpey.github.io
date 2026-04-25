@@ -3,37 +3,91 @@
    PCB Portfolio · rasoolpeykarporsan.me · REV A
    ============================================================ */
 
-/* ---- 3D Perspective Container ----
-   The viewport element provides the camera / perspective.
-   The pcb-board is the element that rotates on X.
-   Populated with GSAP animations in js/transition.js (Step 5).
-   ---------------------------------------------------------------- */
+/* ============================================================
+   Scroll Driver
+   A tall element in normal document flow.
+   Its height is calculated and set by JS (transition.js).
+   ============================================================ */
+
+.scroll-driver {
+  position: relative;
+  /* height is set dynamically by JS — no CSS height here */
+}
+
+/* ============================================================
+   PCB Viewport
+   Sticks to the top of the screen while the user scrolls through
+   the .scroll-driver. Acts as the 3D perspective "camera."
+   ============================================================ */
 
 .pcb-viewport {
-  perspective: 120rem;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;           /* clips layers during rotation so they don't overhang */
+
+  /* 3D camera — perspective on the parent of rotating children */
+  perspective: 80rem;
   perspective-origin: 50% 50%;
-  /* overflow hidden prevents edge overhang during rotation */
-  overflow: hidden;
 }
 
-.pcb-board {
-  transform-style: preserve-3d;
-  /* will-change hints GPU layer promotion for smooth 3D transforms */
-  will-change: transform;
-}
-
-/* ---- Cross-section edge strip (visible during rotation) ----
-   Hidden by default — shown during board flip via GSAP.
-   Phase 1 · Step 6: populated.
-   ---------------------------------------------------------------- */
+/* ============================================================
+   Cross-Section Edge Overlay
+   Visible for ~0.3s during the 90° flip.
+   Shows a realistic PCB cross-section: colored bands + FR4 core.
+   GSAP drives opacity; starts at 0.
+   ============================================================ */
 
 .pcb-edge {
-  display: none; /* shown by JS during transition */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ede8de;        /* warm neutral — FR4 substrate colour */
+  opacity: 0;
   pointer-events: none;
-  z-index: 200;
+  z-index: 50;
 }
+
+.pcb-edge__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+/* Label above the cross-section stack */
+.pcb-edge__label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.30);
+}
+
+/* The band stack — represents the PCB layer stack edge-on */
+.pcb-edge__stack {
+  width: min(50rem, 70vw);
+  display: flex;
+  flex-direction: column;
+  border-left:  2px solid rgba(0, 0, 0, 0.14);
+  border-right: 2px solid rgba(0, 0, 0, 0.14);
+}
+
+/* FR4 core / prepreg layers between copper */
+.pcb-edge__core {
+  height: 2.2rem;
+  background: #d4c89a;        /* FR4 tan-yellow */
+}
+
+/* Copper / mask bands per layer */
+.pcb-edge__band { height: 0.5rem; }
+
+.pcb-edge__band--l1 { background: rgba(184,  58,  46, 0.92); height: 0.6rem; } /* top copper    */
+.pcb-edge__band--l2 { background: rgba( 42, 112,  72, 0.88); height: 1.0rem; } /* solder mask   */
+.pcb-edge__band--l3 { background: rgba(123,  94, 167, 0.85); height: 0.5rem; } /* inner copper  */
+.pcb-edge__band--l4 { background: rgba( 30,  79, 154, 0.85); height: 0.5rem; } /* bottom copper */
+.pcb-edge__band--l5 { background: rgba(160, 122,  16, 0.75); height: 0.8rem; } /* silkscreen    */
