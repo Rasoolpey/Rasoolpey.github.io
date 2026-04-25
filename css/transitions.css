@@ -1,7 +1,39 @@
 /* ============================================================
    transitions.css — 3D Board Rotation + GSAP Targets
    PCB Portfolio · rasoolpeykarporsan.me · REV A
-
-   Phase 1 · Step 5: 90° X-axis rotation mechanic
-   Populated when GSAP + ScrollTrigger is integrated.
    ============================================================ */
+
+/* ---- 3D Perspective Container ----
+   The viewport element provides the camera / perspective.
+   The pcb-board is the element that rotates on X.
+   Populated with GSAP animations in js/transition.js (Step 5).
+   ---------------------------------------------------------------- */
+
+.pcb-viewport {
+  perspective: 120rem;
+  perspective-origin: 50% 50%;
+  /* overflow hidden prevents edge overhang during rotation */
+  overflow: hidden;
+}
+
+.pcb-board {
+  transform-style: preserve-3d;
+  /* will-change hints GPU layer promotion for smooth 3D transforms */
+  will-change: transform;
+}
+
+/* ---- Cross-section edge strip (visible during rotation) ----
+   Hidden by default — shown during board flip via GSAP.
+   Phase 1 · Step 6: populated.
+   ---------------------------------------------------------------- */
+
+.pcb-edge {
+  display: none; /* shown by JS during transition */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 200;
+}
