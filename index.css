@@ -23,6 +23,8 @@
 }
 
 :root {
+    color-scheme: light dark;
+
     --font-size-small: 1.8rem;
     --font-size-normal: 2.2rem;
     --font-size-medium: 2.8rem;
@@ -34,15 +36,22 @@
     --line-height-normal: 1.7;
     --line-height-small: 1.2;
 
+    /* Color tokens (dark theme defaults). The names map to roles: */
+    /*   --black     = page background                              */
+    /*   --white     = headings / strong text / hover-fill          */
+    /*   --white-1   = body text                                    */
+    /*   --pink      = accent                                       */
     --black: #000;
     --pink: #ff3258;
     --white: #f0e9f2;
     --white-1: #e5e5e6da;
+    --border-color: rgb(36, 35, 35);
+    --logo-filter: invert(100%) grayscale(100%) opacity(.8);
 
 
     --container-max-width: 1180px;
     --container-normal-width: 800px;
-    --container-medium-width: 700px; 
+    --container-medium-width: 700px;
     --container-small-width: 500px;
 
     --gutter-huge: 12rem;
@@ -51,7 +60,18 @@
     --gutter-small-1: 2.5rem;
     --gutter-small: 2rem;
 
-    --border-light: 1px solid rgb(36, 35, 35);
+    --border-light: 1px solid var(--border-color);
+}
+
+/* Light theme — auto-applied when the OS is set to light mode */
+@media (prefers-color-scheme: light) {
+    :root {
+        --black: #f5f3f0;        /* page background */
+        --white: #1a1a1a;        /* headings / strong text */
+        --white-1: #2a2627;      /* body text */
+        --border-color: rgb(220, 220, 220);
+        --logo-filter: grayscale(100%) opacity(.7);
+    }
 }
 
 html {
@@ -512,7 +532,7 @@ body:not(.user-is-tabbing) a:focus {
 .client__logos {
     display: flex;
     justify-content: space-between;
-    filter: invert(100%) grayscale(100%) opacity(.8);
+    filter: var(--logo-filter);
 }
 
 .client__logo {
