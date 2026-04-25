@@ -44,8 +44,10 @@
   </nav>
 
   <!-- ===== PCB Board ===== -->
-  <!-- .pcb-viewport provides the 3D perspective "camera"       -->
-  <!-- .pcb-board is the element that rotates on X-axis (Step 5) -->
+  <!-- .scroll-driver is a tall element; its height is set by JS to create scroll room -->
+  <!-- .pcb-viewport is position:sticky — it stays in the viewport while you scroll     -->
+  <!-- .pcb-board holds all 5 layers stacked absolutely — each rotates on X             -->
+  <div class="scroll-driver" id="scrollDriver">
   <div class="pcb-viewport" id="pcbViewport">
   <div class="pcb-board" id="pcbBoard">
 
@@ -119,7 +121,28 @@
     </section>
 
   </div><!-- /pcb-board -->
+
+  <!-- ===== PCB Cross-Section Edge Overlay ===== -->
+  <!-- Fades in during the 90° rotation — shows the board edge-on like a real PCB     -->
+  <div class="pcb-edge" id="pcbEdge" aria-hidden="true">
+    <div class="pcb-edge__inner">
+      <span class="pcb-edge__label">cross section · rev a</span>
+      <div class="pcb-edge__stack">
+        <div class="pcb-edge__band pcb-edge__band--l1"></div>
+        <div class="pcb-edge__core"></div>
+        <div class="pcb-edge__band pcb-edge__band--l2"></div>
+        <div class="pcb-edge__core"></div>
+        <div class="pcb-edge__band pcb-edge__band--l3"></div>
+        <div class="pcb-edge__core"></div>
+        <div class="pcb-edge__band pcb-edge__band--l4"></div>
+        <div class="pcb-edge__core"></div>
+        <div class="pcb-edge__band pcb-edge__band--l5"></div>
+      </div>
+    </div>
+  </div>
+
   </div><!-- /pcb-viewport -->
+  </div><!-- /scroll-driver -->
 
   <!-- GSAP + ScrollTrigger (animation engine + scroll binding) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
@@ -132,6 +155,7 @@
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
   <!-- Portfolio scripts -->
   <script src="js/main.js"></script>
+  <script src="js/transition.js"></script>
 </body>
 
 </html>

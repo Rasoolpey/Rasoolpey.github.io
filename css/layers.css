@@ -8,7 +8,10 @@
    ============================================================ */
 
 .pcb-board {
+  position: relative;
   width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
 }
 
 /* ============================================================
@@ -16,9 +19,11 @@
    ============================================================ */
 
 .layer {
-  position: relative;
-  min-height: 100vh;
+  /* Layers are stacked absolutely inside .pcb-viewport — all occupy the same space */
+  position: absolute;
+  inset: 0;
   width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -27,8 +32,9 @@
            calc(var(--layer-nav-width) + var(--space-lg))
            var(--space-xl)
            var(--space-xl);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  overflow: hidden;
+  /* Hides the back face so flipped layers are invisible — not showing reversed content */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 /* Per-layer background tints */
