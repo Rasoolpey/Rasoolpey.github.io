@@ -77,5 +77,5 @@ body {
   font-size: var(--text-base);
   color: #1a1a1a;
   background: var(--l1-bg);
-  overflow-x: hidden;
+  overflow-x: hidden; /* prevents horizontal scroll from 3D rotation overhang */
 }
