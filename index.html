@@ -44,6 +44,9 @@
   </nav>
 
   <!-- ===== PCB Board ===== -->
+  <!-- .pcb-viewport provides the 3D perspective "camera"       -->
+  <!-- .pcb-board is the element that rotates on X-axis (Step 5) -->
+  <div class="pcb-viewport" id="pcbViewport">
   <div class="pcb-board" id="pcbBoard">
 
     <!-- L1 — Top Copper — Identity & Contact -->
@@ -116,7 +119,18 @@
     </section>
 
   </div><!-- /pcb-board -->
+  </div><!-- /pcb-viewport -->
 
+  <!-- GSAP + ScrollTrigger (animation engine + scroll binding) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9d/6tD8X0A7VVNK2hnZMl+tDhq7jOdLvLMJnUCLJFzVGKzn2/kxWG8xhBuvC0I9XaROTbBEw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTgtzQieve3FnhEJyXMBmGBkCPMHLf9OEFajSERZx3ckFKniJUBDzASbHV7ssPMlNGfsTmSPTRc0ur7IVGA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Lenis smooth scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <!-- Portfolio scripts -->
   <script src="js/main.js"></script>
 </body>
 
