@@ -130,13 +130,103 @@
     },
   });
 
-  /* ----- Nav panel: click to jump to a layer's scroll position ----- */
+  /* ----- Snap: settle to nearest clean position after scroll stops -----
+   *
+   * The only valid resting positions are the start of each layer's
+   * reading zone: [0, slotPx, 2×slotPx, …]. Stopping mid-flip looks
+   * broken, so we detect a scroll pause and nudge the position to the
+   * nearest clean snap point.
+   *
+   * Debounce delay: 140ms — short enough to feel responsive, long
+   * enough not to interrupt intentional slow scrolling.
+   *
+   * Snap decision (when paused inside a flip zone):
+   *   flipProgress < 0.5 → snap BACK  (flip hasn't committed yet)
+   *   flipProgress ≥ 0.5 → snap FORWARD (more than halfway through)
+   */
+  const slotPx       = SLOT_VH * VH / 100;
+  const snapTargets  = Array.from({ length: N }, (_, i) => i * slotPx);
+  let   snapTimer    = null;
+  const SNAP_DELAY   = 140; // ms
+
+  function _nearestSnap(scrollY) {
+    const slotFrac   = scrollY / slotPx;
+    const slotIdx    = Math.min(Math.floor(slotFrac), N - 1);
+    const withinSlot = slotFrac - slotIdx;
+
+    // In the reading zone or on the final layer — already clean
+    if (withinSlot <= readFrac || slotIdx >= N - 1) {
+      return snapTargets[slotIdx];
+    }
+
+    // In the flip zone — decide direction by midpoint
+    const flipProgress = (withinSlot - readFrac) / flipFrac;
+    return flipProgress < 0.5
+      ? snapTargets[slotIdx]       // snap back to current layer
+      : snapTargets[slotIdx + 1];  // snap forward to next layer
+  }
+
+  if (window.lenis) {
+    window.lenis.on('scroll', ({ scroll }) => {
+      clearTimeout(snapTimer);
+      snapTimer = setTimeout(() => {
+        const target = _nearestSnap(scroll);
+        if (Math.abs(scroll - target) > 4) {
+          window.lenis.scrollTo(target, {
+            duration: 0.85,
+            easing: (t) => 1 - Math.pow(1 - t, 3),
+          });
+        }
+      }, SNAP_DELAY);
+    });
+  }
+
+  /* ----- Keyboard navigation -----
+   * ArrowDown / PageDown → jump one layer forward
+   * ArrowUp  / PageUp   → jump one layer back
+   * Home                → jump to L1
+   * End                 → jump to L5
+   */
+  window.addEventListener('keydown', (e) => {
+    if (!window.lenis) return;
+
+    const scroll   = window.scrollY;
+    // Use round() so a position 49% into a slot still counts as that layer
+    const slotIdx  = Math.min(Math.round(scroll / slotPx), N - 1);
+
+    let target = null;
+    switch (e.key) {
+      case 'ArrowDown':
+      case 'PageDown':
+        target = snapTargets[Math.min(slotIdx + 1, N - 1)];
+        break;
+      case 'ArrowUp':
+      case 'PageUp':
+        target = snapTargets[Math.max(slotIdx - 1, 0)];
+        break;
+      case 'Home':
+        target = snapTargets[0];
+        break;
+      case 'End':
+        target = snapTargets[N - 1];
+        break;
+      default:
+        return; // don't prevent default for other keys
+    }
+
+    if (target !== null) {
+      e.preventDefault();
+      window.lenis.scrollTo(target, { duration: 1.2 });
+    }
+  });
+
+  /* ----- Nav panel: click to jump to a layer's scroll position -----
+   * (Replaces the earlier nav handler which used a local slotPx;
+   *  now uses the shared slotPx defined above.) */
   navItems.forEach((item) => {
     item.addEventListener('click', () => {
-      const idx       = parseInt(item.dataset.layer, 10) - 1; // 0-based
-      const slotPx    = SLOT_VH * VH / 100;
-      const targetY   = idx * slotPx;
-
+      const idx     = parseInt(item.dataset.layer, 10) - 1; // 0-based
+      const targetY = snapTargets[idx];
       if (window.lenis) {
         window.lenis.scrollTo(targetY, { duration: 1.4 });
       } else {
