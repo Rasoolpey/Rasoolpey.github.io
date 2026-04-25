@@ -1,0 +1,202 @@
+/* ============================================================
+   layers.css — Layer Sections + Layer Navigation Panel
+   PCB Portfolio · rasoolpeykarporsan.me · REV A
+   ============================================================ */
+
+/* ============================================================
+   PCB Board
+   ============================================================ */
+
+.pcb-board {
+  width: 100%;
+}
+
+/* ============================================================
+   Layer Sections
+   ============================================================ */
+
+.layer {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* Right padding reserves space for the layer nav panel */
+  padding: var(--space-xl)
+           calc(var(--layer-nav-width) + var(--space-lg))
+           var(--space-xl)
+           var(--space-xl);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* Per-layer background tints */
+.layer--l1 { background-color: var(--l1-bg); }
+.layer--l2 { background-color: var(--l2-bg); }
+.layer--l3 { background-color: var(--l3-bg); }
+.layer--l4 { background-color: var(--l4-bg); }
+.layer--l5 { background-color: var(--l5-bg); }
+
+/* ---- Layer Content ---- */
+
+.layer__content {
+  max-width: 80rem;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Small revision / date line above the designator */
+.layer__ref {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.22);
+  margin-bottom: var(--space-lg);
+}
+
+/* Layer identifier — "L1 · TOP COPPER" */
+.layer__designator {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.layer--l1 .layer__designator { color: var(--l1-accent); }
+.layer--l2 .layer__designator { color: var(--l2-accent); }
+.layer--l3 .layer__designator { color: var(--l3-accent); }
+.layer--l4 .layer__designator { color: var(--l4-accent); }
+.layer--l5 .layer__designator { color: var(--l5-accent); }
+
+/* Section title */
+.layer__title {
+  font-family: var(--font-mono);
+  font-size: clamp(2.8rem, 5vw, var(--text-2xl));
+  font-weight: 700;
+  line-height: 1.15;
+  color: #111;
+  margin-bottom: var(--space-lg);
+}
+
+/* Gray placeholder comment line */
+.layer__note {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: rgba(0, 0, 0, 0.18);
+  letter-spacing: 0.05em;
+}
+
+/* ---- PCB Title Block (L5 footer element) ---- */
+
+.pcb-title-block {
+  margin-top: var(--space-xl);
+  display: inline-block;
+}
+
+.pcb-title-block__table {
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+.pcb-title-block__table td {
+  padding: 0.5rem 1.4rem;
+  border: 1px solid rgba(160, 122, 16, 0.28);
+  vertical-align: top;
+}
+
+.pcb-title-block__field {
+  color: rgba(0, 0, 0, 0.38);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: var(--text-xs);
+  white-space: nowrap;
+}
+
+.pcb-title-block__value {
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+/* ============================================================
+   Layer Navigation Panel
+   Fixed to the right edge — styled as an EDA layer panel
+   ============================================================ */
+
+.layer-nav {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  padding: var(--space-md) var(--space-sm);
+}
+
+.layer-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.layer-nav__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  cursor: pointer;
+  padding: 0.3rem 0.4rem;
+  opacity: 0.28;
+  transition: opacity var(--duration) var(--ease-out);
+}
+
+.layer-nav__item:hover,
+.layer-nav__item.is-active {
+  opacity: 1;
+}
+
+/* Label — slides in from right on hover / active */
+.layer-nav__label {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #333;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(0.6rem);
+  transition:
+    opacity var(--duration) var(--ease-out),
+    transform var(--duration) var(--ease-out);
+}
+
+.layer-nav__item:hover .layer-nav__label,
+.layer-nav__item.is-active .layer-nav__label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Colored bar — thickens when active */
+.layer-nav__bar {
+  display: block;
+  height: 3.0rem;
+  width: 0.4rem;
+  border-radius: 0.2rem;
+  flex-shrink: 0;
+  transition: width var(--duration) var(--ease-out);
+}
+
+.layer-nav__item--l1 .layer-nav__bar { background-color: var(--l1-accent); }
+.layer-nav__item--l2 .layer-nav__bar { background-color: var(--l2-accent); }
+.layer-nav__item--l3 .layer-nav__bar { background-color: var(--l3-accent); }
+.layer-nav__item--l4 .layer-nav__bar { background-color: var(--l4-accent); }
+.layer-nav__item--l5 .layer-nav__bar { background-color: var(--l5-accent); }
+
+.layer-nav__item.is-active .layer-nav__bar {
+  width: 0.8rem;
+}

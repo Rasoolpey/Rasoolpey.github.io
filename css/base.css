@@ -1,0 +1,81 @@
+/* ============================================================
+   base.css — CSS Custom Properties + Global Styles
+   PCB Portfolio · rasoolpeykarporsan.me · REV A
+   ============================================================ */
+
+/* ---- Fonts ---- */
+@font-face {
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/HKGrotesk-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/Jost-Regular.ttf') format('truetype');
+}
+
+/* ---- Design Tokens ---- */
+:root {
+  /* PCB Layer Background Tints — ultra-subtle (~3-4% shift from white) */
+  --l1-bg:     #FDF8F8;  /* Top Copper    — warm red tint   */
+  --l2-bg:     #F8FDF9;  /* Solder Mask   — cool green tint */
+  --l3-bg:     #FAF8FD;  /* Inner Copper  — soft purple tint*/
+  --l4-bg:     #F7F9FD;  /* Bottom Copper — cool blue tint  */
+  --l5-bg:     #FDFBF0;  /* Silkscreen    — warm yellow tint*/
+
+  /* PCB Trace Colors — used for SVG traces in Phase 2 */
+  --l1-trace:  rgba(184,  58,  46, 0.20);
+  --l2-trace:  rgba( 42, 112,  72, 0.18);
+  --l3-trace:  rgba(123,  94, 167, 0.18);
+  --l4-trace:  rgba( 30,  79, 154, 0.18);
+  --l5-trace:  rgba(160, 122,  16, 0.22);
+
+  /* Solid accent colors — for UI elements, borders, labels */
+  --l1-accent: #b83a2e;
+  --l2-accent: #2a7048;
+  --l3-accent: #7b5ea7;
+  --l4-accent: #1e4f9a;
+  --l5-accent: #a07a10;
+
+  /* Typography */
+  --font-mono: 'Courier New', Courier, monospace;
+  --font-body: 'HK Grotesk', 'Jost', system-ui, -apple-system, sans-serif;
+
+  /* Type scale (base: html font-size = 62.5%, so 1rem = 10px) */
+  --text-xs:   1.0rem;
+  --text-sm:   1.2rem;
+  --text-base: 1.6rem;
+  --text-lg:   2.0rem;
+  --text-xl:   2.8rem;
+  --text-2xl:  4.0rem;
+  --text-3xl:  6.0rem;
+
+  /* Spacing */
+  --space-xs:  0.4rem;
+  --space-sm:  0.8rem;
+  --space-md:  1.6rem;
+  --space-lg:  3.2rem;
+  --space-xl:  6.4rem;
+
+  /* Layout */
+  --layer-nav-width: 9.6rem;
+
+  /* Animation */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration: 0.3s;
+}
+
+/* ---- Global Body ---- */
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: #1a1a1a;
+  background: var(--l1-bg);
+  overflow-x: hidden;
+}
