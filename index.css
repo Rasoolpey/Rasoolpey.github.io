@@ -66,7 +66,7 @@
 /* Light theme — auto-applied when the OS is set to light mode */
 @media (prefers-color-scheme: light) {
     :root {
-        --black: #ffffff;        /* page background */
+        --black: #f5f3f0;        /* page background */
         --white: #1a1a1a;        /* headings / strong text */
         --white-1: #2a2627;      /* body text */
         --border-color: rgb(220, 220, 220);
