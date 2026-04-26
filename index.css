@@ -462,72 +462,106 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* --------------------------------------- */
-/* ----- Work ----- */
+/* ----- Work / Accordion ----- */
 /* --------------------------------------- */
 
-.work__box {
+.accordion {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: .8rem;
 }
 
-@media(max-width: 900px) {
-    .work__box {
-        align-items: initial;
-        flex-direction: column-reverse;
-    }
+.item {
+    border: var(--border-light);
+    border-radius: 4px;
+    overflow: hidden;
 }
 
-.work__box:not(:last-child) {
-    margin-bottom: 25rem;
-}
-
-@media(max-width: 500px) {
-    .work__box:not(:last-child) {
-        margin-bottom: 20rem;
-    }
-}
-
-.work__links {
+.item__summary {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 1.4rem 2rem;
+    cursor: pointer;
+    list-style: none;
+    gap: 1.5rem;
+    transition: background .15s;
 }
 
-.work__text {
-    flex: 0 0 30%;
+.item__summary::-webkit-details-marker { display: none; }
+
+.item__summary::after {
+    content: '+';
+    font-size: 2.2rem;
+    color: var(--pink);
+    flex-shrink: 0;
+    transition: transform .2s;
 }
 
-.work__list {
-    /* list-style-type: square; */
-    list-style-position: inside;
-    margin-bottom: var(--gutter-normal);
+details[open] > .item__summary::after {
+    transform: rotate(45deg);
 }
 
-.work__code {
-    display: block;
-    height: 3rem;
-    margin-left: var(--gutter-normal);
-    transition: all .3s;
+.item__summary:hover {
+    background: rgba(255,50,88,.06);
 }
 
-.work__code:hover {
-    transform: scale(1.2);
+.item__title {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.7rem;
+    color: var(--white);
+    flex: 1;
 }
 
-.work__image-box {
-    margin-bottom: var(--gutter-normal);
+.item__meta {
+    font-size: 1.4rem;
+    opacity: .65;
+    white-space: nowrap;
 }
 
-@media(min-width: 901px) {
-    .work__image-box {
-        flex: 1;
-        margin: 0 0 0 10rem;
+.item__body {
+    padding: 1.6rem 2rem 2rem;
+    border-top: var(--border-light);
+}
+
+.item__thumb {
+    float: right;
+    width: 18rem;
+    max-width: 35%;
+    margin: 0 0 1.2rem 2rem;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+@media(max-width: 600px) {
+    .item__thumb {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 1.2rem;
     }
 }
 
-@media(max-width: 900px) {
-    .work__code {
-        height: 4rem;
-    }
+.item__body p {
+    margin: 0 0 1.2rem;
+    font-size: 1.6rem;
+    max-width: none;
+}
+
+.item__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    list-style: none;
+    margin: 0 0 1.4rem;
+}
+
+.item__tags li {
+    font-size: 1.3rem;
+    padding: .3rem .9rem;
+    border: 1px solid var(--pink);
+    border-radius: 2px;
+    opacity: .85;
 }
 
 /* --------------------------------------- */
@@ -537,7 +571,7 @@ body:not(.user-is-tabbing) a:focus {
 .publications__list {
     list-style: none;
     display: grid;
-    gap: var(--gutter-medium);
+    gap: 1.6rem;
 }
 
 .publication {
@@ -546,14 +580,17 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .publication__title {
-    font-size: var(--font-size-medium);
-    margin-bottom: var(--gutter-small);
-    line-height: var(--line-height-small);
+    font-size: 1.6rem;
+    font-family: 'Jost', sans-serif;
+    color: var(--white);
+    margin: 0 0 .4rem;
+    line-height: 1.5;
 }
 
 .publication__authors {
     font-family: 'Jost', sans-serif;
-    margin: 0 0 .4rem;
+    font-size: 1.5rem;
+    margin: 0 0 .3rem;
     max-width: none;
 }
 
@@ -563,10 +600,23 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .publication__venue {
-    font-size: var(--font-size-small);
+    font-size: 1.4rem;
     margin: 0;
     opacity: .75;
     max-width: none;
+}
+
+.publication__doi {
+    font-size: 1.3rem;
+    color: var(--pink);
+    text-decoration: none;
+    border-bottom: none;
+    opacity: .9;
+}
+
+.publication__doi:hover {
+    opacity: 1;
+    text-decoration: underline;
 }
 
 .publications__more,
@@ -576,10 +626,6 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 @media(max-width: 600px) {
-    .publication__title {
-        font-size: var(--font-size-medium-1);
-    }
-
     .publications__more,
     .work__more {
         text-align: left;
