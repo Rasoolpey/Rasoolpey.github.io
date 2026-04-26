@@ -22,14 +22,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 
-  <!-- Put your site title here -->
   <title>
-    Rasool Peykarporsan | A PHD Candidate in Electrical Power Electronics and Power Systems
+    Rasool Peykarporsan | PhD Candidate — Power Electronics & Power Systems
   </title>
 
-  <meta name="description" content="Rasool Peykarporsan is a PHD Candidate in Electrical Power Electronics and Power Systems.">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Rasool Peykarporsan, PHD Candidate, Electrical Power Electronics, Power Systems" />
+  <meta name="description" content="Rasool Peykarporsan — PhD Candidate at Auckland University of Technology working on power electronics, microgrids, and machine learning for power systems.">
+  <meta name="keywords" content="Rasool Peykarporsan, PhD Candidate, Power Electronics, Power Systems, Microgrids, Machine Learning, Auckland University of Technology" />
   <link rel="stylesheet" href="index.css" />
 </head>
 
@@ -41,8 +39,8 @@
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li>
+          <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#publications" class="nav__link">Publications</a></li>
           <li class="nav__item">
             <a href="#about" class="nav__link">About</a>
           </li>
@@ -71,111 +69,238 @@
 
     <section class="work" id="work">
       <div class="row">
-        <h2>My Work</h2>
+        <h2>Projects</h2>
         <div class="work__boxes">
-
-          <!-- Each div with the work__box class is a project. -->
 
           <div class="work__box">
             <div class="work__text">
-              <h3>Portfolio Template</h3>
+              <h3>PHPS &mdash; Port-Hamiltonian Power System Simulator</h3>
               <p>
-                A free Open Source Portfolio for anyone to use for free.
+                A power system transient stability simulator that compiles JSON network
+                descriptions into native C++ DAE solvers. Each grid component declares
+                its own states, ports, and dynamics, and the resulting system is
+                integrated with SUNDIALS IDA at native speed &mdash; no Python overhead
+                during simulation.
               </p>
               <ul class="work__list">
-                <li>HTML</li>
-                <li>SCSS</li>
-                <li>JavaScript</li>
-                <li>Parcel</li>
+                <li>Python</li>
+                <li>C++17</li>
+                <li>SUNDIALS IDA</li>
+                <li>Port-Hamiltonian</li>
               </ul>
 
               <div class="work__links">
-                <a href="https://nisar.surge.sh" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
+                <a href="https://github.com/Rasoolpey/PHPS" target="_blank" class="link__text">
+                  View Repository <span>&rarr;</span>
                 </a>
-                <a href="https://github.com/nisarhassan12/portfolio" title="View Source Code" target="_blank">
+                <a href="https://github.com/Rasoolpey/PHPS" title="View Source Code" target="_blank">
                   <img src="./images/github.svg" class="work__code" alt="GitHub">
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./images/project-1.png" class="work__image" alt="Project 1" />
+              <!-- TODO: replace with a real screenshot or diagram of PHPS -->
+              <img src="./images/project-1.png" class="work__image" alt="PHPS simulator" />
             </div>
           </div>
 
           <div class="work__box">
             <div class="work__text">
-              <h3>Calculator</h3>
+              <h3>PIGNN &mdash; Physics-Informed Graph Neural Networks</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
+                A research framework that augments physics-based grid models with
+                learnable correction terms inside a graph neural network. Multi-phase
+                grids are encoded as graphs and trained to capture parasitics and
+                unmodeled dynamics while preserving energy conservation, power balance,
+                and stability guarantees.
               </p>
               <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
+                <li>Python</li>
+                <li>PyTorch</li>
+                <li>Graph Neural Networks</li>
+                <li>Physics-Informed ML</li>
               </ul>
 
               <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
+                <a href="https://github.com/Rasoolpey/PIGNN" target="_blank" class="link__text">
+                  View Repository <span>&rarr;</span>
                 </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+                <a href="https://github.com/Rasoolpey/PIGNN" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub">
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./images/project-2.png" class="work__image" alt="Project 1" />
+              <!-- TODO: replace with a real screenshot or diagram of PIGNN -->
+              <img src="./images/project-2.png" class="work__image" alt="PIGNN graph" />
             </div>
           </div>
 
           <div class="work__box">
             <div class="work__text">
-              <h3>Notificator</h3>
+              <h3>Parallel DDPG Control of a Buck Converter</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
+                A reinforcement learning framework that trains a Deep Deterministic
+                Policy Gradient agent in PyTorch to regulate the output voltage of a
+                Buck DC-DC converter simulated in MATLAB/Simulink. Multiple Simulink
+                instances run in parallel and stream state to the agent over TCP,
+                dramatically accelerating experience collection.
               </p>
               <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
+                <li>Python &middot; PyTorch</li>
+                <li>MATLAB &middot; Simulink</li>
+                <li>DDPG (RL)</li>
+                <li>Power Electronics</li>
               </ul>
 
               <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
+                <a href="https://github.com/Rasoolpey/Matlab-python-RL" target="_blank" class="link__text">
+                  View Repository <span>&rarr;</span>
                 </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+                <a href="https://github.com/Rasoolpey/Matlab-python-RL" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub">
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./images/project-3.png" class="work__image" alt="Project 3" />
+              <!-- TODO: replace with a real screenshot or diagram of the RL setup -->
+              <img src="./images/project-3.png" class="work__image" alt="Parallel DDPG buck converter" />
             </div>
           </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Microgrid Hardware Testbed</h3>
+              <p>
+                A collection of Altium Designer PCBs forming a modular, sensor-rich
+                microgrid testbed: an isolated Buck converter, three- and four-leg
+                voltage source converters, a Neutral Point Clamped inverter, and a
+                line-commutated converter. Each board carries onboard current sensing
+                and an I2C/SPI link to an external MCU controller.
+              </p>
+              <ul class="work__list">
+                <li>Altium Designer</li>
+                <li>Power Electronics</li>
+                <li>PCB Design</li>
+                <li>Embedded Sensing</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://github.com/Rasoolpey/Microgrid_hardware_description" target="_blank" class="link__text">
+                  View Repository <span>&rarr;</span>
+                </a>
+                <a href="https://github.com/Rasoolpey/Microgrid_hardware_description" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <!-- TODO: replace with a real PCB photo or render -->
+              <img src="./images/project-1.png" class="work__image" alt="Microgrid hardware" />
+            </div>
+          </div>
+
         </div>
+        <p class="work__more">
+          <a href="https://github.com/Rasoolpey?tab=repositories" target="_blank" class="link__text">
+            See all repositories on GitHub <span>&rarr;</span>
+          </a>
+        </p>
       </div>
     </section>
 
-    <!-- ***** Clients ***** -->
+    <!-- ***** Publications ***** -->
 
-    <section class="client" id="clients">
+    <section class="publications" id="publications">
       <div class="row">
-        <h2>Clients</h2>
-        <div class="client__logos">
-          <!-- Add logos of the clients or companies you'have worked with. -->
-          <img src="./images/ronjones.png" class="client__logo" alt="Company 2" />
-          <img src="./images/goldengrid.png" class="client__logo" alt="Company 3" />
-          <img src="./images/bullseye.png" class="client__logo" alt="Company 1" />
-          <img src="./images/mighty-furnitures.png" class="client__logo" alt="Company 1" />
-          <img src="./images/fastlane.png" class="client__logo" alt="Company 3" />
-          <img src="./images/chippy.png" class="client__logo" alt="Company 1" />
-        </div>
+        <h2>Selected Publications</h2>
+        <ul class="publications__list">
+
+          <li class="publication">
+            <h3 class="publication__title">
+              A novel intelligent fractional order cascade control to enhance wind energy
+              conversion in wind farms: A practical case study
+            </h3>
+            <p class="publication__authors">
+              <strong>R. Peykarporsan</strong>, S. Oshnoei, A. Fathollahi, T. T. Lie
+            </p>
+            <p class="publication__venue">
+              <em>IEEE Transactions on Energy Conversion</em> &middot; 2025
+            </p>
+          </li>
+
+          <li class="publication">
+            <h3 class="publication__title">
+              Low-voltage solid state DCCB design based on bypassed bidirectional
+              thyristor-capacitor suppressor
+            </h3>
+            <p class="publication__authors">
+              M. Moradian, <strong>R. Peykarporsan</strong>, T. T. Lie, K. Gunawardane
+            </p>
+            <p class="publication__venue">
+              <em>IEEE Transactions on Power Electronics</em> &middot; 2024
+            </p>
+          </li>
+
+          <li class="publication">
+            <h3 class="publication__title">
+              Bidirectional Solid State Circuit Breaker with Passive Surge Absorber for
+              LV Applications
+            </h3>
+            <p class="publication__authors">
+              M. Moradian, <strong>R. Peykarporsan</strong>, T. T. Lie, K. Gunawardane
+            </p>
+            <p class="publication__venue">
+              <em>IEEE Journal of Emerging and Selected Topics in Power Electronics</em> &middot; 2025
+            </p>
+          </li>
+
+          <li class="publication">
+            <h3 class="publication__title">
+              A machine learning approach for fault detection and diagnosis in
+              four-legged inverters
+            </h3>
+            <p class="publication__authors">
+              <strong>R. Peykarporsan</strong>, J. Heidary, S. Oshnoei, T. T. Lie
+            </p>
+            <p class="publication__venue">
+              <em>IEEE Kansas Power and Energy Conference (KPEC)</em> &middot; 2023
+            </p>
+          </li>
+
+          <li class="publication">
+            <h3 class="publication__title">
+              Model order reduction for control and stability analysis of complex
+              dynamical systems in a DC microgrid
+            </h3>
+            <p class="publication__authors">
+              <strong>R. Peykarporsan</strong>, T. T. Lie, M. Stommel, J. Watson
+            </p>
+            <p class="publication__venue">
+              <em>IEEE Power &amp; Energy Society General Meeting (PESGM)</em> &middot; 2024
+            </p>
+          </li>
+
+          <li class="publication">
+            <h3 class="publication__title">
+              Adaptive mixed time-state dependent distributed event-triggered consensus
+              protocol of a DC microgrids cluster
+            </h3>
+            <p class="publication__authors">
+              Z. H. A. Al-Tameemi, <strong>R. Peykarporsan</strong>, T. T. Lie,
+              R. Zamora, F. Blaabjerg
+            </p>
+            <p class="publication__venue">
+              <em>Electric Power Systems Research</em> &middot; 2025
+            </p>
+          </li>
+
+        </ul>
+        <p class="publications__more">
+          <a href="https://scholar.google.com/citations?hl=en&user=AWOKpCAAAAAJ" target="_blank" class="link__text">
+            View all publications on Google Scholar <span>&rarr;</span>
+          </a>
+        </p>
       </div>
     </section>
 
@@ -186,14 +311,21 @@
         <h2>About Me</h2>
         <div class="about__content">
           <div class="about__text">
-            <!-- Replace the below paragraph with info about yourself -->
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos id
-              nostrum illo harum blanditiis, tenetur eum suscipit cupiditate
-              in vel, ex quam quidem quos mollitia labore aut sunt eius
-              ratione molestiae fuga veniam facere similique voluptate.
+              I'm a PhD candidate at <strong>Auckland University of Technology</strong>,
+              working at the intersection of power electronics, microgrid control, and
+              machine learning for power systems. My research spans fault detection in
+              power converters, data-driven system identification, model order reduction
+              for DC microgrids, and physics-informed graph neural networks for grid
+              dynamics.
             </p>
-            <!-- Provide a link to your resume -->
+            <p>
+              Alongside my publications, I build the tools that support the work &mdash;
+              compiled C++ DAE simulators, reinforcement learning environments coupled
+              to MATLAB/Simulink, contingency analysis pipelines for DIgSILENT
+              PowerFactory, and an open hardware microgrid testbed designed in Altium.
+            </p>
+            <!-- TODO: link your CV/resume PDF here -->
             <a href="#" class="btn">My Resume</a>
           </div>
 
@@ -213,15 +345,11 @@
       <h2>Get in Touch</h2>
       <div class="contact__info">
         <p>
-          Are you looking for a fast-performing and user-friendly website to
-          represent your product or business? or looking for any kind of
-          consultation? or want to ask questions? or have some advice for me
-          or just want to say "Hi 👋" in any case feel free to Let me know. I
-          will do my best to respond back. 😊 The quickest way to reach out to
-          me is via an email.
+          I'm always open to discussions on power electronics, microgrid control,
+          machine learning for power systems, or research collaborations. The
+          quickest way to reach me is by email.
         </p>
-        <!-- Replace the email with yours -->
-        <a href="mailto:you@example.com" class="btn">you@example.com</a>
+        <a href="mailto:Rasool.peykarporsan@gmail.com" class="btn">Rasool.peykarporsan@gmail.com</a>
       </div>
     </div>
   </section>
@@ -230,40 +358,31 @@
 
   <footer role="contentinfo" class="footer">
     <div class="row">
-      <!-- Update the links to point to your accounts -->
       <ul class="footer__social-links">
         <li class="footer__social-link-item">
-          <a href="https://twitter.com/nisarhassan12/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
+          <a href="https://github.com/Rasoolpey" target="_blank" title="GitHub Profile">
+            <img src="./images/github.svg" class="footer__social-image" alt="GitHub">
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href="https://github.com/nisarhassan12/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          <!-- TODO: replace # with your LinkedIn URL -->
+          <a href="#" target="_blank" title="LinkedIn Profile">
+            <img src="./images/linkedin.svg" class="footer__social-image" alt="LinkedIn">
           </a>
         </li>
-        <li class="footer__social-link-item">
-          <a href="https://codepen.io/nisar_hassan" title="Link to Codepen Profile">
-            <img src="./images/codepen.svg" class="footer__social-image" alt="Codepen">
-          </a>
+        <li class="footer__social-link-item footer__social-link-item--text">
+          <!-- TODO: replace # with your ORCID URL (e.g. https://orcid.org/0000-0000-0000-0000) -->
+          <a href="#" target="_blank" class="footer__social-text" title="ORCID Profile">ORCID</a>
         </li>
-        <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/nisar-hassan-naqvi-413466199/">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
-          </a>
+        <li class="footer__social-link-item footer__social-link-item--text">
+          <a href="https://scholar.google.com/citations?hl=en&user=AWOKpCAAAAAJ" target="_blank" class="footer__social-text" title="Google Scholar Profile">Scholar</a>
         </li>
       </ul>
 
-      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
       <p>
-        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
+        &copy; 2026 Rasool Peykarporsan. Site template originally by
+        <a href="https://nisar.dev" class="link">Nisar</a>.
       </p>
-      <div class="footer__github-buttons">
-        <iframe
-          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
-          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
-        </iframe>
-      </div>
     </div>
   </footer>
 
