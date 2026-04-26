@@ -565,6 +565,10 @@ body:not(.user-is-tabbing) a:focus {
     max-width: calc((100% - 2.4rem) / 3);
 }
 
+.item__gallery-img:only-child {
+    max-width: 100%;
+}
+
 .item__tags {
     display: flex;
     flex-wrap: wrap;

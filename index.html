@@ -77,17 +77,17 @@
               <span class="split-panel__nav-title">PHPS &mdash; Port-Hamiltonian Power System Simulator</span>
               <span class="split-panel__nav-meta">Python &middot; C++</span>
             </li>
-            <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="proj-1" aria-selected="false" aria-controls="proj-1">
-              <span class="split-panel__nav-title">PIGNN &mdash; Physics-Informed Graph Neural Networks</span>
-              <span class="split-panel__nav-meta">Python</span>
+            <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="proj-3" aria-selected="false" aria-controls="proj-3">
+              <span class="split-panel__nav-title">Microgrid Hardware Testbed</span>
+              <span class="split-panel__nav-meta">Altium Designer</span>
             </li>
             <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="proj-2" aria-selected="false" aria-controls="proj-2">
               <span class="split-panel__nav-title">TCP PowerFactory-MATLAB-Python Bridge</span>
               <span class="split-panel__nav-meta">Python &middot; MATLAB &middot; PowerFactory</span>
             </li>
-            <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="proj-3" aria-selected="false" aria-controls="proj-3">
-              <span class="split-panel__nav-title">Microgrid Hardware Testbed</span>
-              <span class="split-panel__nav-meta">Altium Designer</span>
+            <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="proj-1" aria-selected="false" aria-controls="proj-1">
+              <span class="split-panel__nav-title">PIGNN &mdash; Physics-Informed Graph Neural Networks</span>
+              <span class="split-panel__nav-meta">Python</span>
             </li>
             <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="proj-4" aria-selected="false" aria-controls="proj-4">
               <span class="split-panel__nav-title">Modular Contingency Analysis for Power Systems</span>
@@ -98,7 +98,7 @@
               <span class="split-panel__nav-meta">Jupyter</span>
             </li>
             <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="proj-6" aria-selected="false" aria-controls="proj-6">
-              <span class="split-panel__nav-title">MATLAB-Python RL Bridge (early prototype)</span>
+              <span class="split-panel__nav-title">Reinforcement Learning on Python-MATLAB TCP Bridge</span>
               <span class="split-panel__nav-meta">Jupyter &middot; MATLAB</span>
             </li>
             <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="proj-7" aria-selected="false" aria-controls="proj-7">
@@ -127,22 +127,22 @@
               <a href="https://github.com/Rasoolpey/PHPS" target="_blank" class="link__text">View on GitHub <span>&rarr;</span></a>
             </div>
 
-            <div class="split-panel__pane" id="proj-1" role="tabpanel">
-              <h3 class="split-panel__pane-title">PIGNN &mdash; Physics-Informed Graph Neural Networks</h3>
-              <p>A research framework that augments physics-based grid models with
-                learnable correction terms inside a graph neural network. Multi-phase
-                grids are encoded as graphs and trained to capture parasitics and
-                unmodeled dynamics while preserving energy conservation, power balance,
-                and stability guarantees.</p>
+            <div class="split-panel__pane" id="proj-3" role="tabpanel">
+              <h3 class="split-panel__pane-title">Microgrid Hardware Testbed</h3>
+              <p>A collection of Altium Designer PCBs forming a modular, sensor-rich
+                microgrid testbed: an isolated Buck converter, three- and four-leg
+                voltage source converters, a Neutral Point Clamped inverter, and a
+                line-commutated converter. Each board carries onboard current sensing
+                and an I2C/SPI link to an external MCU controller.</p>
               <ul class="item__tags">
-                <li>PyTorch</li><li>Graph Neural Networks</li><li>Physics-Informed ML</li>
+                <li>PCB Design</li><li>Power Electronics</li><li>Embedded Sensing</li>
               </ul>
               <div class="item__gallery">
-                <img class="item__gallery-img" src="./images/project-1.png" alt="PIGNN screenshot" />
-                <!-- TODO: replace with a second screenshot -->
-                <img class="item__gallery-img item__gallery-placeholder" src="./images/project-1.png" alt="Placeholder" />
+                <img class="item__gallery-img" src="./images/Buck_Converter.jpg" alt="Buck converter hardware board" />
+                <img class="item__gallery-img" src="./images/VSC.jpg" alt="Concurrent microgrid architecture" />
+                <img class="item__gallery-img" src="./images/NPC.jpg" alt="Neutral point clamped inverter hardware" />
               </div>
-              <a href="https://github.com/Rasoolpey/PIGNN" target="_blank" class="link__text">View on GitHub <span>&rarr;</span></a>
+              <a href="https://github.com/Rasoolpey/Microgrid_hardware_description" target="_blank" class="link__text">View on GitHub <span>&rarr;</span></a>
             </div>
 
             <div class="split-panel__pane" id="proj-2" role="tabpanel">
@@ -162,22 +162,21 @@
               <a href="https://github.com/Rasoolpey/TCP-PowerFactory-Matlab-Python" target="_blank" class="link__text">View on GitHub <span>&rarr;</span></a>
             </div>
 
-            <div class="split-panel__pane" id="proj-3" role="tabpanel">
-              <h3 class="split-panel__pane-title">Microgrid Hardware Testbed</h3>
-              <p>A collection of Altium Designer PCBs forming a modular, sensor-rich
-                microgrid testbed: an isolated Buck converter, three- and four-leg
-                voltage source converters, a Neutral Point Clamped inverter, and a
-                line-commutated converter. Each board carries onboard current sensing
-                and an I2C/SPI link to an external MCU controller.</p>
+            <div class="split-panel__pane" id="proj-1" role="tabpanel">
+              <h3 class="split-panel__pane-title">PIGNN &mdash; Physics-Informed Graph Neural Networks</h3>
+              <p>A research framework that augments physics-based grid models with
+                learnable correction terms inside a graph neural network. Multi-phase
+                grids are encoded as graphs and trained to capture parasitics and
+                unmodeled dynamics while preserving energy conservation, power balance,
+                and stability guarantees.</p>
               <ul class="item__tags">
-                <li>PCB Design</li><li>Power Electronics</li><li>Embedded Sensing</li>
+                <li>PyTorch</li><li>Graph Neural Networks</li><li>Physics-Informed ML</li>
               </ul>
               <div class="item__gallery">
-                <img class="item__gallery-img" src="./images/Buck_Converter.jpg" alt="Buck converter hardware board" />
-                <img class="item__gallery-img" src="./images/VSC.jpg" alt="Concurrent microgrid architecture" />
-                <img class="item__gallery-img" src="./images/NPC.jpg" alt="Neutral point clamped inverter hardware" />
+                <img class="item__gallery-img" src="./images/3Ph_GNN.png" alt="Three-phase graph neural network architecture" />
+                <img class="item__gallery-img" src="./images/Zonage.jpg" alt="Zonage / network partitioning diagram" />
               </div>
-              <a href="https://github.com/Rasoolpey/Microgrid_hardware_description" target="_blank" class="link__text">View on GitHub <span>&rarr;</span></a>
+              <a href="https://github.com/Rasoolpey/PIGNN" target="_blank" class="link__text">View on GitHub <span>&rarr;</span></a>
             </div>
 
             <div class="split-panel__pane" id="proj-4" role="tabpanel">
@@ -191,9 +190,7 @@
                 <li>Python</li><li>PowerFactory</li><li>HDF5</li><li>Power Systems</li>
               </ul>
               <div class="item__gallery">
-                <img class="item__gallery-img" src="./images/project-1.png" alt="Contingency analysis screenshot" />
-                <!-- TODO: replace with a second screenshot -->
-                <img class="item__gallery-img item__gallery-placeholder" src="./images/project-1.png" alt="Placeholder" />
+                <img class="item__gallery-img" src="./images/Contingency.svg" alt="Contingency analysis pipeline diagram" />
               </div>
               <a href="https://github.com/Rasoolpey/Contingency-Analysis-Python-Pwerfactory" target="_blank" class="link__text">View on GitHub <span>&rarr;</span></a>
             </div>
@@ -208,15 +205,14 @@
                 <li>TensorFlow / Keras</li><li>Power Electronics</li><li>Fault Diagnosis</li>
               </ul>
               <div class="item__gallery">
-                <img class="item__gallery-img" src="./images/project-1.png" alt="Fault classification screenshot" />
-                <!-- TODO: replace with a second screenshot -->
-                <img class="item__gallery-img item__gallery-placeholder" src="./images/project-1.png" alt="Placeholder" />
+                <img class="item__gallery-img" src="./images/Fault1.jpg" alt="Per-switch fault feature embedding (8 switches) in 3D and 2D projections" />
+                <img class="item__gallery-img" src="./images/fault2.jpg" alt="Fault-mode embedding: normal, short-circuit, and open-circuit clusters" />
               </div>
               <a href="https://github.com/Rasoolpey/faultClassificationDeepLearning" target="_blank" class="link__text">View on GitHub <span>&rarr;</span></a>
             </div>
 
             <div class="split-panel__pane" id="proj-6" role="tabpanel">
-              <h3 class="split-panel__pane-title">MATLAB-Python RL Bridge (early prototype)</h3>
+              <h3 class="split-panel__pane-title">Reinforcement Learning on Python-MATLAB TCP Bridge</h3>
               <p>An earlier prototype that runs a Simulink model as a reinforcement
                 learning environment and synchronously streams state and actions
                 between Simulink and Python over TCP. Predecessor to the parallel
@@ -225,9 +221,8 @@
                 <li>MATLAB Engine</li><li>Simulink</li><li>TCP</li><li>RL</li>
               </ul>
               <div class="item__gallery">
-                <img class="item__gallery-img" src="./images/project-1.png" alt="RL bridge screenshot" />
-                <!-- TODO: replace with a second screenshot -->
-                <img class="item__gallery-img item__gallery-placeholder" src="./images/project-1.png" alt="Placeholder" />
+                <img class="item__gallery-img" src="./images/RL1.svg" alt="RL Python-MATLAB TCP bridge architecture" />
+                <img class="item__gallery-img" src="./images/RL2.png" alt="Training episode: output voltage and duty cycle over time" />
               </div>
               <a href="https://github.com/Rasoolpey/reinforcement" target="_blank" class="link__text">View on GitHub <span>&rarr;</span></a>
             </div>
