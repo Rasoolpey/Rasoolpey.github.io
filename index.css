@@ -545,13 +545,19 @@ body:not(.user-is-tabbing) a:focus {
     max-width: none;
 }
 
-.item__thumb {
-    float: right;
-    width: 16rem;
-    max-width: 40%;
-    margin: 0 0 1.2rem 2rem;
+.item__gallery {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+
+.item__gallery-img {
+    flex: 1;
+    max-width: 50%;
+    max-height: 26rem;
     border-radius: 4px;
-    object-fit: cover;
+    object-fit: contain;
+    background: rgba(128,128,128,.06);
 }
 
 .item__tags {
@@ -633,11 +639,13 @@ body:not(.user-is-tabbing) a:focus {
         max-height: none;
     }
 
-    .item__thumb {
-        float: none;
-        width: 100%;
+    .item__gallery {
+        flex-direction: column;
+    }
+
+    .item__gallery-img {
         max-width: 100%;
-        margin: 0 0 1.2rem;
+        max-height: none;
     }
 }
 
