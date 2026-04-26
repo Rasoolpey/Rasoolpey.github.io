@@ -531,28 +531,58 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* --------------------------------------- */
-/* ----- Clients ----- */
+/* ----- Publications ----- */
 /* --------------------------------------- */
 
-.client__logos {
-    display: flex;
-    justify-content: space-between;
-    filter: var(--logo-filter);
+.publications__list {
+    list-style: none;
+    display: grid;
+    gap: var(--gutter-medium);
 }
 
-.client__logo {
-    height: 6.5rem;
-    max-width: 18rem;
+.publication {
+    padding-left: var(--gutter-normal);
+    border-left: 2px solid var(--pink);
 }
 
-@media(max-width: 1240px) {
-    .client__logos {
-        overflow-x: scroll;
-        padding: var(--gutter-normal);
+.publication__title {
+    font-size: var(--font-size-medium);
+    margin-bottom: var(--gutter-small);
+    line-height: var(--line-height-small);
+}
+
+.publication__authors {
+    font-family: 'Jost', sans-serif;
+    margin: 0 0 .4rem;
+    max-width: none;
+}
+
+.publication__authors strong {
+    color: var(--white);
+    font-weight: 400;
+}
+
+.publication__venue {
+    font-size: var(--font-size-small);
+    margin: 0;
+    opacity: .75;
+    max-width: none;
+}
+
+.publications__more,
+.work__more {
+    margin-top: var(--gutter-medium);
+    text-align: right;
+}
+
+@media(max-width: 600px) {
+    .publication__title {
+        font-size: var(--font-size-medium-1);
     }
 
-    .client__logo:not(:last-of-type) {
-        margin-right: var(--gutter-medium);
+    .publications__more,
+    .work__more {
+        text-align: left;
     }
 }
 
@@ -618,6 +648,25 @@ body:not(.user-is-tabbing) a:focus {
 
 .footer__social-image {
     height: 4rem;
+}
+
+.footer__social-link-item--text {
+    display: flex;
+    align-items: center;
+}
+
+.footer__social-text {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-small);
+    text-decoration: none;
+    color: inherit;
+    padding: .6rem 1rem;
+    border: 1px solid var(--pink);
+    transition: all .2s;
+}
+
+.footer__social-text:hover {
+    color: var(--pink);
 }
 
 .footer__github-buttons {
