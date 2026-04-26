@@ -70,191 +70,157 @@
     <section class="work" id="work">
       <div class="row">
         <h2>Projects</h2>
-        <div class="accordion">
+        <div class="split-panel">
 
-          <details class="item">
-            <summary class="item__summary">
-              <span class="item__title">PHPS &mdash; Port-Hamiltonian Power System Simulator</span>
-              <span class="item__meta">Python &middot; C++</span>
-            </summary>
-            <div class="item__body">
+          <ul class="split-panel__nav" role="tablist" aria-label="Projects">
+            <li class="split-panel__nav-item is-active" role="tab" tabindex="0" data-pane="proj-0" aria-selected="true" aria-controls="proj-0">
+              <span class="split-panel__nav-title">PHPS &mdash; Port-Hamiltonian Power System Simulator</span>
+              <span class="split-panel__nav-meta">Python &middot; C++</span>
+            </li>
+            <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="proj-1" aria-selected="false" aria-controls="proj-1">
+              <span class="split-panel__nav-title">PIGNN &mdash; Physics-Informed Graph Neural Networks</span>
+              <span class="split-panel__nav-meta">Python</span>
+            </li>
+            <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="proj-2" aria-selected="false" aria-controls="proj-2">
+              <span class="split-panel__nav-title">Parallel DDPG Control of a Buck Converter</span>
+              <span class="split-panel__nav-meta">Python &middot; MATLAB</span>
+            </li>
+            <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="proj-3" aria-selected="false" aria-controls="proj-3">
+              <span class="split-panel__nav-title">Microgrid Hardware Testbed</span>
+              <span class="split-panel__nav-meta">Altium Designer</span>
+            </li>
+            <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="proj-4" aria-selected="false" aria-controls="proj-4">
+              <span class="split-panel__nav-title">Modular Contingency Analysis for Power Systems</span>
+              <span class="split-panel__nav-meta">Python &middot; PowerFactory</span>
+            </li>
+            <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="proj-5" aria-selected="false" aria-controls="proj-5">
+              <span class="split-panel__nav-title">Fault Classification with Deep Learning</span>
+              <span class="split-panel__nav-meta">Jupyter</span>
+            </li>
+            <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="proj-6" aria-selected="false" aria-controls="proj-6">
+              <span class="split-panel__nav-title">MATLAB-Python RL Bridge (early prototype)</span>
+              <span class="split-panel__nav-meta">Jupyter &middot; MATLAB</span>
+            </li>
+            <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="proj-7" aria-selected="false" aria-controls="proj-7">
+              <span class="split-panel__nav-title">Neovim Config (LazyVim + LaTeX + Obsidian)</span>
+              <span class="split-panel__nav-meta">Lua</span>
+            </li>
+          </ul>
+
+          <div class="split-panel__body">
+
+            <div class="split-panel__pane is-active" id="proj-0" role="tabpanel">
               <img class="item__thumb" src="./images/project-1.png" alt="PHPS project screenshot" />
-              <p>
-                A power system transient stability simulator that compiles JSON network
+              <h3 class="split-panel__pane-title">PHPS &mdash; Port-Hamiltonian Power System Simulator</h3>
+              <p>A power system transient stability simulator that compiles JSON network
                 descriptions into native C++ DAE solvers. Each grid component declares
                 its own states, ports, parameters, and dynamics; the resulting system is
                 integrated with SUNDIALS IDA at native speed &mdash; no Python overhead
-                during simulation.
-              </p>
+                during simulation.</p>
               <ul class="item__tags">
                 <li>Python</li><li>C++17</li><li>SUNDIALS IDA</li><li>Port-Hamiltonian</li>
               </ul>
-              <a href="https://github.com/Rasoolpey/PHPS" target="_blank" class="link__text">
-                View on GitHub <span>&rarr;</span>
-              </a>
+              <a href="https://github.com/Rasoolpey/PHPS" target="_blank" class="link__text">View on GitHub <span>&rarr;</span></a>
             </div>
-          </details>
 
-          <details class="item">
-            <summary class="item__summary">
-              <span class="item__title">PIGNN &mdash; Physics-Informed Graph Neural Networks</span>
-              <span class="item__meta">Python</span>
-            </summary>
-            <div class="item__body">
+            <div class="split-panel__pane" id="proj-1" role="tabpanel">
               <img class="item__thumb" src="./images/project-1.png" alt="PIGNN project screenshot" />
-              <p>
-                A research framework that augments physics-based grid models with
+              <h3 class="split-panel__pane-title">PIGNN &mdash; Physics-Informed Graph Neural Networks</h3>
+              <p>A research framework that augments physics-based grid models with
                 learnable correction terms inside a graph neural network. Multi-phase
                 grids are encoded as graphs and trained to capture parasitics and
                 unmodeled dynamics while preserving energy conservation, power balance,
-                and stability guarantees.
-              </p>
+                and stability guarantees.</p>
               <ul class="item__tags">
                 <li>PyTorch</li><li>Graph Neural Networks</li><li>Physics-Informed ML</li>
               </ul>
-              <a href="https://github.com/Rasoolpey/PIGNN" target="_blank" class="link__text">
-                View on GitHub <span>&rarr;</span>
-              </a>
+              <a href="https://github.com/Rasoolpey/PIGNN" target="_blank" class="link__text">View on GitHub <span>&rarr;</span></a>
             </div>
-          </details>
 
-          <details class="item">
-            <summary class="item__summary">
-              <span class="item__title">Parallel DDPG Control of a Buck Converter</span>
-              <span class="item__meta">Python &middot; MATLAB</span>
-            </summary>
-            <div class="item__body">
+            <div class="split-panel__pane" id="proj-2" role="tabpanel">
               <img class="item__thumb" src="./images/project-1.png" alt="DDPG project screenshot" />
-              <p>
-                A reinforcement learning framework that trains a Deep Deterministic
+              <h3 class="split-panel__pane-title">Parallel DDPG Control of a Buck Converter</h3>
+              <p>A reinforcement learning framework that trains a Deep Deterministic
                 Policy Gradient agent in PyTorch to regulate the output voltage of a
                 Buck DC-DC converter simulated in MATLAB/Simulink. Multiple Simulink
                 instances run in parallel and stream state to the agent over TCP,
                 dramatically accelerating experience collection. Linked to the IEEE
-                KPEC 2023 paper.
-              </p>
+                KPEC 2023 paper.</p>
               <ul class="item__tags">
                 <li>PyTorch</li><li>Simulink</li><li>DDPG (RL)</li><li>Power Electronics</li>
               </ul>
-              <a href="https://github.com/Rasoolpey/Matlab-python-RL" target="_blank" class="link__text">
-                View on GitHub <span>&rarr;</span>
-              </a>
+              <a href="https://github.com/Rasoolpey/Matlab-python-RL" target="_blank" class="link__text">View on GitHub <span>&rarr;</span></a>
             </div>
-          </details>
 
-          <details class="item">
-            <summary class="item__summary">
-              <span class="item__title">Microgrid Hardware Testbed</span>
-              <span class="item__meta">Altium Designer</span>
-            </summary>
-            <div class="item__body">
+            <div class="split-panel__pane" id="proj-3" role="tabpanel">
               <img class="item__thumb" src="./images/project-1.png" alt="Microgrid hardware testbed screenshot" />
-              <p>
-                A collection of Altium Designer PCBs forming a modular, sensor-rich
+              <h3 class="split-panel__pane-title">Microgrid Hardware Testbed</h3>
+              <p>A collection of Altium Designer PCBs forming a modular, sensor-rich
                 microgrid testbed: an isolated Buck converter, three- and four-leg
                 voltage source converters, a Neutral Point Clamped inverter, and a
                 line-commutated converter. Each board carries onboard current sensing
-                and an I2C/SPI link to an external MCU controller.
-              </p>
+                and an I2C/SPI link to an external MCU controller.</p>
               <ul class="item__tags">
                 <li>PCB Design</li><li>Power Electronics</li><li>Embedded Sensing</li>
               </ul>
-              <a href="https://github.com/Rasoolpey/Microgrid_hardware_description" target="_blank" class="link__text">
-                View on GitHub <span>&rarr;</span>
-              </a>
+              <a href="https://github.com/Rasoolpey/Microgrid_hardware_description" target="_blank" class="link__text">View on GitHub <span>&rarr;</span></a>
             </div>
-          </details>
 
-          <details class="item">
-            <summary class="item__summary">
-              <span class="item__title">Modular Contingency Analysis for Power Systems</span>
-              <span class="item__meta">Python &middot; PowerFactory</span>
-            </summary>
-            <div class="item__body">
+            <div class="split-panel__pane" id="proj-4" role="tabpanel">
               <img class="item__thumb" src="./images/project-1.png" alt="Contingency analysis screenshot" />
-              <p>
-                A modular Python framework for N-1 and N-2 contingency analysis on
+              <h3 class="split-panel__pane-title">Modular Contingency Analysis for Power Systems</h3>
+              <p>A modular Python framework for N-1 and N-2 contingency analysis on
                 power systems using DIgSILENT PowerFactory. The pipeline generates
                 scenarios, solves post-contingency load flows, computes voltage
                 sensitivities, builds Y-matrices from impedance data, and stores
-                everything as structured HDF5 for downstream analysis.
-              </p>
+                everything as structured HDF5 for downstream analysis.</p>
               <ul class="item__tags">
                 <li>Python</li><li>PowerFactory</li><li>HDF5</li><li>Power Systems</li>
               </ul>
-              <a href="https://github.com/Rasoolpey/Contingency-Analysis-Python-Pwerfactory" target="_blank" class="link__text">
-                View on GitHub <span>&rarr;</span>
-              </a>
+              <a href="https://github.com/Rasoolpey/Contingency-Analysis-Python-Pwerfactory" target="_blank" class="link__text">View on GitHub <span>&rarr;</span></a>
             </div>
-          </details>
 
-          <details class="item">
-            <summary class="item__summary">
-              <span class="item__title">Fault Classification with Deep Learning</span>
-              <span class="item__meta">Jupyter</span>
-            </summary>
-            <div class="item__body">
+            <div class="split-panel__pane" id="proj-5" role="tabpanel">
               <img class="item__thumb" src="./images/project-1.png" alt="Fault classification screenshot" />
-              <p>
-                Deep learning models for fault detection and diagnosis in four-leg
+              <h3 class="split-panel__pane-title">Fault Classification with Deep Learning</h3>
+              <p>Deep learning models for fault detection and diagnosis in four-leg
                 inverters. The companion dataset is published on Kaggle as
                 <em>four-leg inverter fault detection</em>. This work underpins the
-                IEEE KPEC 2023 paper on the same topic.
-              </p>
+                IEEE KPEC 2023 paper on the same topic.</p>
               <ul class="item__tags">
                 <li>TensorFlow / Keras</li><li>Power Electronics</li><li>Fault Diagnosis</li>
               </ul>
-              <a href="https://github.com/Rasoolpey/faultClassificationDeepLearning" target="_blank" class="link__text">
-                View on GitHub <span>&rarr;</span>
-              </a>
+              <a href="https://github.com/Rasoolpey/faultClassificationDeepLearning" target="_blank" class="link__text">View on GitHub <span>&rarr;</span></a>
             </div>
-          </details>
 
-          <details class="item">
-            <summary class="item__summary">
-              <span class="item__title">MATLAB-Python RL Bridge (early prototype)</span>
-              <span class="item__meta">Jupyter &middot; MATLAB</span>
-            </summary>
-            <div class="item__body">
+            <div class="split-panel__pane" id="proj-6" role="tabpanel">
               <img class="item__thumb" src="./images/project-1.png" alt="MATLAB-Python RL bridge screenshot" />
-              <p>
-                An earlier prototype that runs a Simulink model as a reinforcement
+              <h3 class="split-panel__pane-title">MATLAB-Python RL Bridge (early prototype)</h3>
+              <p>An earlier prototype that runs a Simulink model as a reinforcement
                 learning environment and synchronously streams state and actions
                 between Simulink and Python over TCP. Predecessor to the parallel
-                DDPG framework above.
-              </p>
+                DDPG framework above.</p>
               <ul class="item__tags">
                 <li>MATLAB Engine</li><li>Simulink</li><li>TCP</li><li>RL</li>
               </ul>
-              <a href="https://github.com/Rasoolpey/reinforcement" target="_blank" class="link__text">
-                View on GitHub <span>&rarr;</span>
-              </a>
+              <a href="https://github.com/Rasoolpey/reinforcement" target="_blank" class="link__text">View on GitHub <span>&rarr;</span></a>
             </div>
-          </details>
 
-          <details class="item">
-            <summary class="item__summary">
-              <span class="item__title">Neovim Config (LazyVim + LaTeX + Obsidian)</span>
-              <span class="item__meta">Lua</span>
-            </summary>
-            <div class="item__body">
+            <div class="split-panel__pane" id="proj-7" role="tabpanel">
               <img class="item__thumb" src="./images/project-1.png" alt="Neovim config screenshot" />
-              <p>
-                A personal Neovim setup based on LazyVim with plugins for LaTeX
+              <h3 class="split-panel__pane-title">Neovim Config (LazyVim + LaTeX + Obsidian)</h3>
+              <p>A personal Neovim setup based on LazyVim with plugins for LaTeX
                 authoring, Obsidian note-taking, and GitHub Copilot. Includes the
-                Zathura PDF viewer config used as the LaTeX preview target.
-              </p>
+                Zathura PDF viewer config used as the LaTeX preview target.</p>
               <ul class="item__tags">
                 <li>Neovim</li><li>LazyVim</li><li>LaTeX</li><li>Obsidian</li>
               </ul>
-              <a href="https://github.com/Rasoolpey/Nvim-Repo" target="_blank" class="link__text">
-                View on GitHub <span>&rarr;</span>
-              </a>
+              <a href="https://github.com/Rasoolpey/Nvim-Repo" target="_blank" class="link__text">View on GitHub <span>&rarr;</span></a>
             </div>
-          </details>
 
+          </div>
         </div>
-        <p class="section__more">
+        <p class="work__more">
           <a href="https://github.com/Rasoolpey?tab=repositories" target="_blank" class="link__text">
             See all repositories on GitHub <span>&rarr;</span>
           </a>
@@ -267,139 +233,125 @@
     <section class="publications" id="publications">
       <div class="row">
         <h2>Selected Publications</h2>
-        <ul class="publications__list">
+        <div class="split-panel">
 
-          <li class="publication">
-            <p class="publication__title">
-              Hierarchical switch fault diagnosis based on transformer algorithm in four-leg inverters of stand-alone wind energy conversion systems
-            </p>
-            <p class="publication__authors">
-              J. Heidari, <strong>R. Peykarporsan</strong>, S. Oshnoei, T. T. Lie, L. Vandevelde, G. Crevecoeur
-            </p>
-            <p class="publication__venue">
-              <em>International Journal of Electrical Power &amp; Energy Systems</em> &middot; 2026 &middot;
+          <ul class="split-panel__nav" role="tablist" aria-label="Publications">
+            <li class="split-panel__nav-item is-active" role="tab" tabindex="0" data-pane="pub-0" aria-selected="true" aria-controls="pub-0">
+              <span class="split-panel__nav-title">Hierarchical switch fault diagnosis in four-leg inverters of stand-alone wind energy conversion systems</span>
+              <span class="split-panel__nav-meta">IJEPES &middot; 2026</span>
+            </li>
+            <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="pub-1" aria-selected="false" aria-controls="pub-1">
+              <span class="split-panel__nav-title">Intelligent fractional order cascade control for wind energy conversion in wind farms</span>
+              <span class="split-panel__nav-meta">IEEE TEC &middot; 2025</span>
+            </li>
+            <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="pub-2" aria-selected="false" aria-controls="pub-2">
+              <span class="split-panel__nav-title">Bidirectional Solid State Circuit Breaker with Passive Surge Absorber for LV Applications</span>
+              <span class="split-panel__nav-meta">IEEE JESTPE &middot; 2025</span>
+            </li>
+            <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="pub-3" aria-selected="false" aria-controls="pub-3">
+              <span class="split-panel__nav-title">Adaptive distributed ANN-based event-triggered consensus algorithm of a DC microgrid cluster</span>
+              <span class="split-panel__nav-meta">Elec. Eng. &middot; 2025</span>
+            </li>
+            <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="pub-4" aria-selected="false" aria-controls="pub-4">
+              <span class="split-panel__nav-title">Adaptive mixed time-state dependent distributed event-triggered consensus protocol of a DC microgrids cluster</span>
+              <span class="split-panel__nav-meta">EPSR &middot; 2025</span>
+            </li>
+            <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="pub-5" aria-selected="false" aria-controls="pub-5">
+              <span class="split-panel__nav-title">Low-voltage solid state DCCB design based on bypassed bidirectional thyristor-capacitor suppressor</span>
+              <span class="split-panel__nav-meta">IEEE TPEL &middot; 2024</span>
+            </li>
+            <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="pub-6" aria-selected="false" aria-controls="pub-6">
+              <span class="split-panel__nav-title">Model order reduction for control and stability analysis in a DC microgrid</span>
+              <span class="split-panel__nav-meta">IEEE PESGM &middot; 2024</span>
+            </li>
+            <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="pub-7" aria-selected="false" aria-controls="pub-7">
+              <span class="split-panel__nav-title">State identification of DC microgrids using probabilistic methods in the presence of noise</span>
+              <span class="split-panel__nav-meta">IEEE PMAPS &middot; 2024</span>
+            </li>
+            <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="pub-8" aria-selected="false" aria-controls="pub-8">
+              <span class="split-panel__nav-title">A machine learning approach for fault detection and diagnosis in four-legged inverters</span>
+              <span class="split-panel__nav-meta">IEEE KPEC &middot; 2023</span>
+            </li>
+            <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="pub-9" aria-selected="false" aria-controls="pub-9">
+              <span class="split-panel__nav-title">Model order reduction of power converters based on mechanical constraints</span>
+              <span class="split-panel__nav-meta">IEEE COMPEL &middot; 2021</span>
+            </li>
+          </ul>
+
+          <div class="split-panel__body">
+
+            <div class="split-panel__pane is-active" id="pub-0" role="tabpanel">
+              <p class="pub-pane__title">Hierarchical switch fault diagnosis based on transformer algorithm in four-leg inverters of stand-alone wind energy conversion systems</p>
+              <p class="pub-pane__authors">J. Heidari, <strong>R. Peykarporsan</strong>, S. Oshnoei, T. T. Lie, L. Vandevelde, G. Crevecoeur</p>
+              <p class="pub-pane__venue"><em>International Journal of Electrical Power &amp; Energy Systems</em> &middot; 2026</p>
               <a href="https://doi.org/10.1016/j.ijepes.2026.111607" target="_blank" class="publication__doi">DOI: 10.1016/j.ijepes.2026.111607</a>
-            </p>
-          </li>
+            </div>
 
-          <li class="publication">
-            <p class="publication__title">
-              A novel intelligent fractional order cascade control to enhance wind energy conversion in wind farms: A practical case study
-            </p>
-            <p class="publication__authors">
-              <strong>R. Peykarporsan</strong>, S. Oshnoei, A. Fathollahi, T. T. Lie
-            </p>
-            <p class="publication__venue">
-              <em>IEEE Transactions on Energy Conversion</em> &middot; 2025 &middot;
+            <div class="split-panel__pane" id="pub-1" role="tabpanel">
+              <p class="pub-pane__title">A novel intelligent fractional order cascade control to enhance wind energy conversion in wind farms: A practical case study</p>
+              <p class="pub-pane__authors"><strong>R. Peykarporsan</strong>, S. Oshnoei, A. Fathollahi, T. T. Lie</p>
+              <p class="pub-pane__venue"><em>IEEE Transactions on Energy Conversion</em> &middot; 2025</p>
               <a href="https://doi.org/10.1109/TEC.2025.3543144" target="_blank" class="publication__doi">DOI: 10.1109/TEC.2025.3543144</a>
-            </p>
-          </li>
+            </div>
 
-          <li class="publication">
-            <p class="publication__title">
-              Bidirectional Solid State Circuit Breaker with Passive Surge Absorber for LV Applications
-            </p>
-            <p class="publication__authors">
-              M. Moradian, <strong>R. Peykarporsan</strong>, T. T. Lie, K. Gunawardane
-            </p>
-            <p class="publication__venue">
-              <em>IEEE Journal of Emerging and Selected Topics in Power Electronics</em> &middot; 2025 &middot;
+            <div class="split-panel__pane" id="pub-2" role="tabpanel">
+              <p class="pub-pane__title">Bidirectional Solid State Circuit Breaker with Passive Surge Absorber for LV Applications</p>
+              <p class="pub-pane__authors">M. Moradian, <strong>R. Peykarporsan</strong>, T. T. Lie, K. Gunawardane</p>
+              <p class="pub-pane__venue"><em>IEEE Journal of Emerging and Selected Topics in Power Electronics</em> &middot; 2025</p>
               <a href="https://doi.org/10.1109/JESTPE.2025.3554206" target="_blank" class="publication__doi">DOI: 10.1109/JESTPE.2025.3554206</a>
-            </p>
-          </li>
+            </div>
 
-          <li class="publication">
-            <p class="publication__title">
-              Adaptive distributed ANN-based event-triggered consensus algorithm of a DC microgrid cluster
-            </p>
-            <p class="publication__authors">
-              Z. H. A. Al-Tameemi, <strong>R. Peykarporsan</strong>, T. T. Lie, R. Zamora, F. Blaabjerg
-            </p>
-            <p class="publication__venue">
-              <em>Electrical Engineering (Springer)</em> &middot; 2025 &middot;
+            <div class="split-panel__pane" id="pub-3" role="tabpanel">
+              <p class="pub-pane__title">Adaptive distributed ANN-based event-triggered consensus algorithm of a DC microgrid cluster</p>
+              <p class="pub-pane__authors">Z. H. A. Al-Tameemi, <strong>R. Peykarporsan</strong>, T. T. Lie, R. Zamora, F. Blaabjerg</p>
+              <p class="pub-pane__venue"><em>Electrical Engineering (Springer)</em> &middot; 2025</p>
               <a href="https://doi.org/10.1007/s00202-025-03418-8" target="_blank" class="publication__doi">DOI: 10.1007/s00202-025-03418-8</a>
-            </p>
-          </li>
+            </div>
 
-          <li class="publication">
-            <p class="publication__title">
-              Adaptive mixed time-state dependent distributed event-triggered consensus protocol of a DC microgrids cluster
-            </p>
-            <p class="publication__authors">
-              Z. H. A. Al-Tameemi, <strong>R. Peykarporsan</strong>, T. T. Lie, R. Zamora, F. Blaabjerg
-            </p>
-            <p class="publication__venue">
-              <em>Electric Power Systems Research</em> &middot; 2025 &middot;
+            <div class="split-panel__pane" id="pub-4" role="tabpanel">
+              <p class="pub-pane__title">Adaptive mixed time-state dependent distributed event-triggered consensus protocol of a DC microgrids cluster</p>
+              <p class="pub-pane__authors">Z. H. A. Al-Tameemi, <strong>R. Peykarporsan</strong>, T. T. Lie, R. Zamora, F. Blaabjerg</p>
+              <p class="pub-pane__venue"><em>Electric Power Systems Research</em> &middot; 2025</p>
               <a href="https://doi.org/10.1016/j.epsr.2025.111849" target="_blank" class="publication__doi">DOI: 10.1016/j.epsr.2025.111849</a>
-            </p>
-          </li>
+            </div>
 
-          <li class="publication">
-            <p class="publication__title">
-              Low-voltage solid state DCCB design based on bypassed bidirectional thyristor-capacitor suppressor
-            </p>
-            <p class="publication__authors">
-              M. Moradian, <strong>R. Peykarporsan</strong>, T. T. Lie, K. Gunawardane
-            </p>
-            <p class="publication__venue">
-              <em>IEEE Transactions on Power Electronics</em> &middot; 2024 &middot;
+            <div class="split-panel__pane" id="pub-5" role="tabpanel">
+              <p class="pub-pane__title">Low-voltage solid state DCCB design based on bypassed bidirectional thyristor-capacitor suppressor</p>
+              <p class="pub-pane__authors">M. Moradian, <strong>R. Peykarporsan</strong>, T. T. Lie, K. Gunawardane</p>
+              <p class="pub-pane__venue"><em>IEEE Transactions on Power Electronics</em> &middot; 2024</p>
               <a href="https://doi.org/10.1109/TPEL.2024.3463734" target="_blank" class="publication__doi">DOI: 10.1109/TPEL.2024.3463734</a>
-            </p>
-          </li>
+            </div>
 
-          <li class="publication">
-            <p class="publication__title">
-              Model order reduction for control and stability analysis of complex dynamical systems in a DC microgrid
-            </p>
-            <p class="publication__authors">
-              <strong>R. Peykarporsan</strong>, T. T. Lie, M. Stommel, J. Watson
-            </p>
-            <p class="publication__venue">
-              <em>IEEE Power &amp; Energy Society General Meeting (PESGM)</em> &middot; 2024 &middot;
+            <div class="split-panel__pane" id="pub-6" role="tabpanel">
+              <p class="pub-pane__title">Model order reduction for control and stability analysis of complex dynamical systems in a DC microgrid</p>
+              <p class="pub-pane__authors"><strong>R. Peykarporsan</strong>, T. T. Lie, M. Stommel, J. Watson</p>
+              <p class="pub-pane__venue"><em>IEEE Power &amp; Energy Society General Meeting (PESGM)</em> &middot; 2024</p>
               <a href="https://doi.org/10.1109/PESGM51994.2024.10689165" target="_blank" class="publication__doi">DOI: 10.1109/PESGM51994.2024.10689165</a>
-            </p>
-          </li>
+            </div>
 
-          <li class="publication">
-            <p class="publication__title">
-              State identification of DC microgrids using probabilistic methods in the presence of noise
-            </p>
-            <p class="publication__authors">
-              L. Kamyabi, <strong>R. Peykarporsan</strong>, T. T. Lie
-            </p>
-            <p class="publication__venue">
-              <em>IEEE PMAPS</em> &middot; 2024 &middot;
+            <div class="split-panel__pane" id="pub-7" role="tabpanel">
+              <p class="pub-pane__title">State identification of DC microgrids using probabilistic methods in the presence of noise</p>
+              <p class="pub-pane__authors">L. Kamyabi, <strong>R. Peykarporsan</strong>, T. T. Lie</p>
+              <p class="pub-pane__venue"><em>IEEE PMAPS</em> &middot; 2024</p>
               <a href="https://doi.org/10.1109/PMAPS61648.2024.10667324" target="_blank" class="publication__doi">DOI: 10.1109/PMAPS61648.2024.10667324</a>
-            </p>
-          </li>
+            </div>
 
-          <li class="publication">
-            <p class="publication__title">
-              A machine learning approach for fault detection and diagnosis in four-legged inverters
-            </p>
-            <p class="publication__authors">
-              <strong>R. Peykarporsan</strong>, J. Heidary, S. Oshnoei, T. T. Lie
-            </p>
-            <p class="publication__venue">
-              <em>IEEE Kansas Power and Energy Conference (KPEC)</em> &middot; 2023 &middot;
+            <div class="split-panel__pane" id="pub-8" role="tabpanel">
+              <p class="pub-pane__title">A machine learning approach for fault detection and diagnosis in four-legged inverters</p>
+              <p class="pub-pane__authors"><strong>R. Peykarporsan</strong>, J. Heidary, S. Oshnoei, T. T. Lie</p>
+              <p class="pub-pane__venue"><em>IEEE Kansas Power and Energy Conference (KPEC)</em> &middot; 2023</p>
               <a href="https://doi.org/10.1109/KPEC58008.2023.10215460" target="_blank" class="publication__doi">DOI: 10.1109/KPEC58008.2023.10215460</a>
-            </p>
-          </li>
+            </div>
 
-          <li class="publication">
-            <p class="publication__title">
-              Model order reduction of power converters based on mechanical constraints
-            </p>
-            <p class="publication__authors">
-              <strong>R. Peykarporsan</strong> et al.
-            </p>
-            <p class="publication__venue">
-              <em>IEEE COMPEL</em> &middot; 2021 &middot;
+            <div class="split-panel__pane" id="pub-9" role="tabpanel">
+              <p class="pub-pane__title">Model order reduction of power converters based on mechanical constraints</p>
+              <p class="pub-pane__authors"><strong>R. Peykarporsan</strong> et al.</p>
+              <p class="pub-pane__venue"><em>IEEE COMPEL</em> &middot; 2021</p>
               <a href="https://doi.org/10.1109/COMPEL52922.2021.9646001" target="_blank" class="publication__doi">DOI: 10.1109/COMPEL52922.2021.9646001</a>
-            </p>
-          </li>
+            </div>
 
-        </ul>
+          </div>
+        </div>
         <p class="publications__more">
           <a href="https://scholar.google.com/citations?hl=en&user=AWOKpCAAAAAJ" target="_blank" class="link__text">
             View all publications on Google Scholar <span>&rarr;</span>

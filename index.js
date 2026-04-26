@@ -41,3 +41,32 @@ window.addEventListener("scroll", () => {
     alterStyles(isBackToTopRendered);
   }
 });
+
+/* -----------------------------------------
+  Split panel — projects & publications
+ ---------------------------------------- */
+document.querySelectorAll('.split-panel').forEach(panel => {
+  const navItems = panel.querySelectorAll('.split-panel__nav-item');
+  const panes    = panel.querySelectorAll('.split-panel__pane');
+
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const targetId = item.dataset.pane;
+      navItems.forEach(i => {
+        i.classList.remove('is-active');
+        i.setAttribute('aria-selected', 'false');
+      });
+      panes.forEach(p => p.classList.remove('is-active'));
+      item.classList.add('is-active');
+      item.setAttribute('aria-selected', 'true');
+      panel.querySelector('#' + targetId).classList.add('is-active');
+    });
+
+    item.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        item.click();
+      }
+    });
+  });
+});
