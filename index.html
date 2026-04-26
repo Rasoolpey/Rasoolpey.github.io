@@ -82,8 +82,8 @@
               <span class="split-panel__nav-meta">Python</span>
             </li>
             <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="proj-2" aria-selected="false" aria-controls="proj-2">
-              <span class="split-panel__nav-title">Parallel DDPG Control of a Buck Converter</span>
-              <span class="split-panel__nav-meta">Python &middot; MATLAB</span>
+              <span class="split-panel__nav-title">TCP PowerFactory-MATLAB-Python Bridge</span>
+              <span class="split-panel__nav-meta">Python &middot; MATLAB &middot; PowerFactory</span>
             </li>
             <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="proj-3" aria-selected="false" aria-controls="proj-3">
               <span class="split-panel__nav-title">Microgrid Hardware Testbed</span>
@@ -146,22 +146,20 @@
             </div>
 
             <div class="split-panel__pane" id="proj-2" role="tabpanel">
-              <h3 class="split-panel__pane-title">Parallel DDPG Control of a Buck Converter</h3>
-              <p>A reinforcement learning framework that trains a Deep Deterministic
-                Policy Gradient agent in PyTorch to regulate the output voltage of a
-                Buck DC-DC converter simulated in MATLAB/Simulink. Multiple Simulink
-                instances run in parallel and stream state to the agent over TCP,
-                dramatically accelerating experience collection. Linked to the IEEE
-                KPEC 2023 paper.</p>
+              <h3 class="split-panel__pane-title">TCP PowerFactory-MATLAB-Python Bridge</h3>
+              <p>A co-simulation framework that links DIgSILENT PowerFactory,
+                MATLAB/Simulink, and Python through a TCP-based communication layer.
+                The project enables concurrent simulation workflows where control,
+                system studies, and data exchange run in sync across tools for
+                rapid prototyping and validation.</p>
               <ul class="item__tags">
-                <li>PyTorch</li><li>Simulink</li><li>DDPG (RL)</li><li>Power Electronics</li>
+                <li>PowerFactory</li><li>MATLAB/Simulink</li><li>Python</li><li>TCP</li>
               </ul>
               <div class="item__gallery">
-                <img class="item__gallery-img" src="./images/project-1.png" alt="DDPG screenshot" />
-                <!-- TODO: replace with a second screenshot -->
-                <img class="item__gallery-img item__gallery-placeholder" src="./images/project-1.png" alt="Placeholder" />
+                <img class="item__gallery-img" src="./images/PowerFactory.svg" alt="PowerFactory integration diagram" />
+                <img class="item__gallery-img" src="./images/Concurrent.svg" alt="Concurrent workflow diagram" />
               </div>
-              <a href="https://github.com/Rasoolpey/Matlab-python-RL" target="_blank" class="link__text">View on GitHub <span>&rarr;</span></a>
+              <a href="https://github.com/Rasoolpey/TCP-PowerFactory-Matlab-Python" target="_blank" class="link__text">View on GitHub <span>&rarr;</span></a>
             </div>
 
             <div class="split-panel__pane" id="proj-3" role="tabpanel">
@@ -175,9 +173,9 @@
                 <li>PCB Design</li><li>Power Electronics</li><li>Embedded Sensing</li>
               </ul>
               <div class="item__gallery">
-                <img class="item__gallery-img" src="./images/project-1.png" alt="Microgrid testbed screenshot" />
-                <!-- TODO: replace with a second screenshot -->
-                <img class="item__gallery-img item__gallery-placeholder" src="./images/project-1.png" alt="Placeholder" />
+                <img class="item__gallery-img" src="./images/Buck_Converter.jpg" alt="Buck converter hardware board" />
+                <img class="item__gallery-img" src="./images/VSC.jpg" alt="Concurrent microgrid architecture" />
+                <img class="item__gallery-img" src="./images/NPC.jpg" alt="Neutral point clamped inverter hardware" />
               </div>
               <a href="https://github.com/Rasoolpey/Microgrid_hardware_description" target="_blank" class="link__text">View on GitHub <span>&rarr;</span></a>
             </div>
