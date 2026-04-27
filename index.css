@@ -859,6 +859,14 @@ body:not(.user-is-tabbing) a:focus {
     margin-bottom: var(--gutter-small);
 }
 
+.hobby-icon {
+    width: 1.3em;
+    height: 1.3em;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 0.1em;
+}
+
 /* --------------------------------------- */
 /* ----- Contact ----- */
 /* --------------------------------------- */
