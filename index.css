@@ -560,9 +560,11 @@ body:not(.user-is-tabbing) a:focus {
     background: rgba(128,128,128,.06);
 }
 
-#proj-3 .item__gallery-img {
+#proj-3 .item__gallery-img,
+#proj-7 .item__gallery-img {
     flex: 0 1 calc((100% - 2.4rem) / 3);
     max-width: calc((100% - 2.4rem) / 3);
+    min-width: 0;
 }
 
 .item__gallery-img:only-child {
@@ -657,7 +659,8 @@ body:not(.user-is-tabbing) a:focus {
         max-height: none;
     }
 
-    #proj-3 .item__gallery-img {
+    #proj-3 .item__gallery-img,
+    #proj-7 .item__gallery-img {
         flex: 1;
         max-width: 100%;
     }
