@@ -314,6 +314,49 @@
               <p class="pub-pane__title">A novel intelligent fractional order cascade control to enhance wind energy conversion in wind farms: A practical case study</p>
               <p class="pub-pane__authors"><strong>R. Peykarporsan</strong>, S. Oshnoei, A. Fathollahi, T. T. Lie</p>
               <p class="pub-pane__venue"><em>IEEE Transactions on Energy Conversion</em> &middot; 2025</p>
+
+              <p class="pub-pane__summary">
+                In this work we propose a four-degree-of-freedom (4DoF)
+                fractional-order cascade controller for wind farms based
+                on doubly fed induction generators (DFIGs). The motivation
+                is that wind speed is inherently uncertain, and this
+                uncertainty degrades the dynamic performance of the
+                conventional integer-order controllers used in wind energy
+                conversion systems. The proposed controller combines a
+                4DoF inner block &mdash; built from fractional-order PID
+                and tilt-integral-derivative control, which we call
+                <em>4DoF-IHYB</em> &mdash; with a fractional-order
+                tilt-derivative outer loop that attenuates input noise and
+                disturbances. To tune the controller's parameters under
+                volatile operating conditions, we use a deep deterministic
+                policy gradient (DDPG) reinforcement-learning agent. The
+                method is validated on a practical case study of a wind
+                farm in New Zealand, and the results show clearly improved
+                dynamic stability, robustness, and disturbance attenuation
+                compared with existing controllers reported in the
+                literature.
+              </p>
+
+              <p class="pub-pane__highlights-title">Highlights</p>
+              <ul class="pub-pane__highlights">
+                <li>Four-degree-of-freedom fractional-order cascade
+                  controller (4DoF-IHYB inner block + FOTD outer loop)
+                  for DFIG-based wind farms.</li>
+                <li>DDPG reinforcement learning used to tune the
+                  controller parameters under wind-speed uncertainty.</li>
+                <li>Validated on a practical case study at a wind energy
+                  facility in New Zealand.</li>
+                <li>Improved dynamic stability, robustness, and
+                  disturbance rejection over baseline methods from the
+                  literature.</li>
+              </ul>
+
+              <div class="item__gallery">
+                <img class="item__gallery-img" src="./images/Papers/First/peyka2-3543144-large.gif" alt="Proposed 4DoF fractional-order cascade controller architecture" />
+                <img class="item__gallery-img" src="./images/Papers/First/peyka6-3543144-large.gif" alt="DDPG-based parameter tuning workflow" />
+                <img class="item__gallery-img" src="./images/Papers/First/peyka8-3543144-large.gif" alt="Simulation results from the New Zealand wind-farm case study" />
+              </div>
+
               <a href="https://doi.org/10.1109/TEC.2025.3543144" target="_blank" class="publication__doi">DOI: 10.1109/TEC.2025.3543144</a>
             </div>
 
@@ -321,6 +364,52 @@
               <p class="pub-pane__title">Low-voltage solid state DCCB design based on bypassed bidirectional thyristor-capacitor suppressor</p>
               <p class="pub-pane__authors">M. Moradian, <strong>R. Peykarporsan</strong>, T. T. Lie, K. Gunawardane</p>
               <p class="pub-pane__venue"><em>IEEE Transactions on Power Electronics</em> &middot; 2024</p>
+
+              <p class="pub-pane__summary">
+                In this work we propose a low-voltage solid-state DC
+                circuit breaker (SS-DCCB) based on a novel bidirectional
+                thyristor-capacitor (BiTriCap) suppressor. The motivation
+                is that DC microgrids need fast, reliable current
+                interruption with low overvoltage stress, and conventional
+                MOV-based protection leaves measurable headroom on both
+                metrics. The proposed design uses parallel snubber
+                capacitors that absorb the switching transient and
+                release the stored energy during the next switch
+                operation, redirecting the surge into the bypassed
+                capacitor and producing a clean zero-current crossing.
+                The model accounts for both line and load inductances,
+                and an ARM microcontroller manages the switch sequencing
+                in real time. We validated the breaker experimentally at
+                48&nbsp;VDC&nbsp;/&nbsp;8&nbsp;A &mdash; a design that
+                scales to higher voltage and current ranges &mdash; and
+                the prototype showed only 2&nbsp;V of residual overvoltage
+                across the main switch, with experimental waveforms
+                matching the simulations across switching and fault
+                scenarios.
+              </p>
+
+              <p class="pub-pane__highlights-title">Highlights</p>
+              <ul class="pub-pane__highlights">
+                <li>Novel bidirectional thyristor-capacitor (BiTriCap)
+                  suppressor for solid-state DC circuit breakers in DC
+                  microgrids.</li>
+                <li>Parallel snubber capacitors absorb the switching
+                  transient and release the stored energy on the next
+                  operation, producing a clean zero-current crossing.</li>
+                <li>Real-time sequencing of the solid-state switches
+                  managed by a programmed ARM microcontroller.</li>
+                <li>Experimentally validated at 48&nbsp;VDC&nbsp;/&nbsp;8&nbsp;A
+                  with only 2&nbsp;V residual overvoltage across the main
+                  switch; design scales to higher voltage and current
+                  ranges.</li>
+              </ul>
+
+              <div class="item__gallery">
+                <img class="item__gallery-img" src="./images/Papers/Second/morad3-3463734-large.gif" alt="Proposed BiTriCap-based SS-DCCB topology" />
+                <img class="item__gallery-img" src="./images/Papers/Second/morad9-3463734-large.gif" alt="Switching sequence and capacitor energy redirection" />
+                <img class="item__gallery-img" src="./images/Papers/Second/morad15-3463734-large.gif" alt="Experimental waveforms vs simulation results" />
+              </div>
+
               <a href="https://doi.org/10.1109/TPEL.2024.3463734" target="_blank" class="publication__doi">DOI: 10.1109/TPEL.2024.3463734</a>
             </div>
 
@@ -328,6 +417,46 @@
               <p class="pub-pane__title">Bidirectional Solid State Circuit Breaker with Passive Surge Absorber for LV Applications</p>
               <p class="pub-pane__authors">M. Moradian, <strong>R. Peykarporsan</strong>, T. T. Lie, K. Gunawardane</p>
               <p class="pub-pane__venue"><em>IEEE Journal of Emerging and Selected Topics in Power Electronics</em> &middot; 2025</p>
+
+              <p class="pub-pane__summary">
+                In this work we propose a low-voltage solid-state circuit
+                breaker (SSCB) based on a novel bidirectional passive
+                technique (BPT) built around an RCD topology. The
+                motivation is that DC microgrid protection benefits from
+                breakers that are simple, bidirectional, and fully
+                passive &mdash; limiting active components to the primary
+                switch reduces cost, control complexity, and failure
+                modes. The article details the working principles,
+                operating modes, and the key design equations for the
+                time intervals, voltages, and currents involved. The
+                design was validated experimentally and in MATLAB at
+                48&nbsp;VDC with a 10&nbsp;A threshold fault current
+                (Future Architecture of Network Project), achieving
+                20&nbsp;&micro;s to fully interrupt the load, 40&nbsp;&micro;s
+                switching time, and 90&nbsp;&micro;s total fault clearing
+                &mdash; with minimal surge voltage across the main switch.
+              </p>
+
+              <p class="pub-pane__highlights-title">Highlights</p>
+              <ul class="pub-pane__highlights">
+                <li>Bidirectional passive technique (BPT) SSCB based on
+                  an RCD topology &mdash; only the primary switch is
+                  active.</li>
+                <li>Fast interruption: 20&nbsp;&micro;s full load
+                  interrupt, 40&nbsp;&micro;s switching time, 90&nbsp;&micro;s
+                  total fault clearing.</li>
+                <li>Rated for 48&nbsp;VDC&nbsp;/&nbsp;10&nbsp;A (Future
+                  Architecture of Network Project).</li>
+                <li>Validated by both MATLAB simulation and an
+                  experimental prototype.</li>
+              </ul>
+
+              <div class="item__gallery">
+                <img class="item__gallery-img" src="./images/Papers/third/morad4-3554206-large.gif" alt="Proposed BPT-based SSCB topology" />
+                <img class="item__gallery-img" src="./images/Papers/third/morad7-3554206-large.gif" alt="Operating modes and switching sequence" />
+                <img class="item__gallery-img" src="./images/Papers/third/morad8-3554206-large.gif" alt="Experimental and simulation waveforms" />
+              </div>
+
               <a href="https://doi.org/10.1109/JESTPE.2025.3554206" target="_blank" class="publication__doi">DOI: 10.1109/JESTPE.2025.3554206</a>
             </div>
 
@@ -335,6 +464,48 @@
               <p class="pub-pane__title">Hierarchical switch fault diagnosis based on transformer algorithm in four-leg inverters of stand-alone wind energy conversion systems</p>
               <p class="pub-pane__authors">J. Heidari, <strong>R. Peykarporsan</strong>, S. Oshnoei, T. T. Lie, L. Vandevelde, G. Crevecoeur</p>
               <p class="pub-pane__venue"><em>International Journal of Electrical Power &amp; Energy Systems</em> &middot; 2026</p>
+
+              <p class="pub-pane__summary">
+                In this work we propose a hierarchical Transformer-based
+                fault diagnosis scheme for four-leg inverters used in
+                stand-alone wind energy conversion systems. The motivation
+                is that four-leg inverters are the standard solution for
+                handling unbalanced loads in stand-alone wind setups, but
+                their switching devices remain vulnerable to internal
+                faults &mdash; and reliably identifying both the fault
+                type (open-circuit vs. short-circuit) and the specific
+                faulty switch is non-trivial under varying operating
+                points. The proposed model uses a two-level hierarchical
+                Transformer that first classifies the fault type and then
+                localises the faulty switch. Datasets covering a wide
+                range of operating scenarios were generated on an OPAL-RT
+                hardware-in-the-loop setup to mimic real conditions. The
+                results show that the Transformer-based diagnosis
+                outperforms state-of-the-art machine learning algorithms,
+                and the hierarchical two-level structure is consistently
+                more effective than a single-level approach.
+              </p>
+
+              <p class="pub-pane__highlights-title">Highlights</p>
+              <ul class="pub-pane__highlights">
+                <li>Hierarchical two-level Transformer-based fault
+                  diagnosis for four-leg inverters in stand-alone wind
+                  energy systems.</li>
+                <li>Detects and classifies both open-circuit and
+                  short-circuit switch faults, then localises the
+                  specific faulty switch.</li>
+                <li>Datasets generated with an OPAL-RT hardware-in-the-loop
+                  simulator across diverse operating points.</li>
+                <li>Outperforms state-of-the-art ML baselines and a
+                  single-level structure on classification accuracy.</li>
+              </ul>
+
+              <div class="item__gallery">
+                <img class="item__gallery-img" src="./images/Papers/Fourth/1-s2.0-S0142061526000499-gr4.jpg" alt="Four-leg inverter and proposed hierarchical Transformer architecture" />
+                <img class="item__gallery-img" src="./images/Papers/Fourth/1-s2.0-S0142061526000499-gr9.jpg" alt="OPAL-RT hardware-in-the-loop dataset generation" />
+                <img class="item__gallery-img" src="./images/Papers/Fourth/1-s2.0-S0142061526000499-gr11.jpg" alt="Fault classification results vs baseline algorithms" />
+              </div>
+
               <a href="https://doi.org/10.1016/j.ijepes.2026.111607" target="_blank" class="publication__doi">DOI: 10.1016/j.ijepes.2026.111607</a>
             </div>
 
@@ -342,6 +513,51 @@
               <p class="pub-pane__title">Adaptive mixed time-state dependent distributed event-triggered consensus protocol of a DC microgrids cluster</p>
               <p class="pub-pane__authors">Z. H. A. Al-Tameemi, <strong>R. Peykarporsan</strong>, T. T. Lie, R. Zamora, F. Blaabjerg</p>
               <p class="pub-pane__venue"><em>Electric Power Systems Research</em> &middot; 2025</p>
+
+              <p class="pub-pane__summary">
+                In this work we propose the Adaptive Mixed Time-State
+                Dependent Distributed Event-Triggered Consensus protocol
+                (AMDETC) for the global control layer of a DC microgrid
+                (MG) cluster. The motivation is that traditional
+                consensus-based secondary control demands frequent
+                communication between MGs, which makes the cluster
+                sensitive to communication delays and limits scalability.
+                The proposed protocol triggers updates only when a mixed
+                time- and state-dependent condition is satisfied, sharply
+                reducing the inter-MG communication load. We pair AMDETC
+                with an adaptive fixed-time consensus algorithm (AFTA)
+                &mdash; augmented by a saturation function &mdash; to
+                accelerate current-sharing convergence, and use the Grey
+                Wolf Optimizer (GWO) to tune the PI controllers in the
+                secondary layer. The approach was validated in MATLAB on
+                a four-DC-MG cluster and on OPAL-RT under realistic
+                conditions, achieving 100% triggering accuracy, current
+                convergence within 0.02&nbsp;s, fast voltage recovery,
+                and accurate proportional current sharing under load
+                changes and fault scenarios.
+              </p>
+
+              <p class="pub-pane__highlights-title">Highlights</p>
+              <ul class="pub-pane__highlights">
+                <li>Novel AMDETC event-triggered consensus protocol cuts
+                  inter-MG communication while maintaining cluster
+                  stability.</li>
+                <li>Adaptive fixed-time consensus algorithm (AFTA) with
+                  a saturation function accelerates current-sharing
+                  convergence.</li>
+                <li>Grey Wolf Optimizer (GWO) tunes the secondary-layer
+                  PI controllers for improved disturbance rejection.</li>
+                <li>Validated on a four-DC-MG cluster in MATLAB and on
+                  OPAL-RT: 100% triggering accuracy, current convergence
+                  within 0.02&nbsp;s.</li>
+              </ul>
+
+              <div class="item__gallery">
+                <img class="item__gallery-img" src="./images/Papers/fifth/1-s2.0-S0378779625004407-gr1.jpg" alt="Four-DC-MG cluster architecture and hierarchical control layers" />
+                <img class="item__gallery-img" src="./images/Papers/fifth/1-s2.0-S0378779625004407-gr2.jpg" alt="AMDETC event-triggered communication scheme" />
+                <img class="item__gallery-img" src="./images/Papers/fifth/1-s2.0-S0378779625004407-gr12.jpg" alt="Voltage recovery and current convergence under disturbances" />
+              </div>
+
               <a href="https://doi.org/10.1016/j.epsr.2025.111849" target="_blank" class="publication__doi">DOI: 10.1016/j.epsr.2025.111849</a>
             </div>
 
@@ -349,6 +565,53 @@
               <p class="pub-pane__title">A Novel Model-Free Defense Scheme for Power Systems Stability Under Cyber Attacks</p>
               <p class="pub-pane__authors">S. Oshnoei, <strong>R. Peykarporsan</strong>, J. Heidari, E. Mahboubi-Moghaddam, T. T. Lie</p>
               <p class="pub-pane__venue"><em>IET Generation, Transmission &amp; Distribution</em> &middot; 2026</p>
+
+              <p class="pub-pane__summary">
+                In this work we propose a model-free resilient defence
+                scheme to protect the load frequency control (LFC) loop
+                of a power system against false data injection (FDI)
+                cyber-attacks. The motivation is that LFC depends on
+                communication networks and is therefore exposed to FDI
+                attacks, while existing defences require either a precise
+                mathematical model of the system or extensive historical
+                data &mdash; neither of which is always available. The
+                proposed scheme combines a model-free observer that
+                estimates the targeted frequency signal directly from
+                measurement and control signals, a detector that compares
+                the residual against a predefined threshold to flag
+                attacks, and an event-triggered mechanism that &mdash; on
+                detection &mdash; blocks the falsified signal and
+                forwards the estimated one to the LFC controller. The
+                observer's parameters are tuned by a deep reinforcement
+                learning (DRL) algorithm. The scheme was validated in
+                real time on Kundur's 4-unit-12-bus system using OPAL-RT
+                and completely mitigated FDI attacks on the frequency
+                response across multiple scenarios &mdash; with a design
+                that is independent of the system's mathematical model,
+                historical data, size, and complexity.
+              </p>
+
+              <p class="pub-pane__highlights-title">Highlights</p>
+              <ul class="pub-pane__highlights">
+                <li>Model-free resilient defence scheme protecting load
+                  frequency control (LFC) against false data injection
+                  (FDI) cyber-attacks.</li>
+                <li>Combines a model-free observer, a residual-vs-threshold
+                  detector, and an event-triggered mitigation mechanism.</li>
+                <li>Deep reinforcement learning (DRL) tunes the observer
+                  parameters; no system model or historical data
+                  required.</li>
+                <li>Validated in real time on Kundur's 4-unit-12-bus
+                  system with OPAL-RT &mdash; full mitigation across
+                  multiple attack scenarios.</li>
+              </ul>
+
+              <div class="item__gallery">
+                <img class="item__gallery-img" src="./images/Papers/Sixth/gtd270218-fig-0001-m.jpg" alt="LFC architecture under FDI cyber-attack" />
+                <img class="item__gallery-img" src="./images/Papers/Sixth/gtd270218-fig-0002-m.jpg" alt="Proposed model-free defence scheme: observer, detector, event-triggered mitigation" />
+                <img class="item__gallery-img" src="./images/Papers/Sixth/gtd270218-fig-0006-m.jpg" alt="OPAL-RT real-time results: frequency response with and without defence" />
+              </div>
+
               <a href="https://doi.org/10.1049/gtd2.70218" target="_blank" class="publication__doi">DOI: 10.1049/gtd2.70218</a>
             </div>
 
@@ -356,6 +619,66 @@
               <p class="pub-pane__title">Data-Driven Parameter Identification of Synchronous Generators: A Three-Stage Framework with State Consistency and Grid Decoupling</p>
               <p class="pub-pane__authors"><strong>R. Peykarporsan</strong>, T. Govinda Waduge, T. T. Lie, M. Stommel</p>
               <p class="pub-pane__venue"><em>Sensors</em> &middot; 2026</p>
+
+              <p class="pub-pane__summary">
+                In this work we propose a three-stage data-driven
+                framework for identifying the parameters of synchronous
+                generators in a Port-Hamiltonian (PH) modelling form.
+                The motivation is that PH frameworks offer inherently
+                stable, energy-consistent, and modular representations
+                for power-system stability analysis, but their practical
+                deployment has been held back by the absence of
+                high-fidelity, PH-compatible parameter identification
+                methods that work from sensor measurements. The widely
+                used IEEE Standard&nbsp;115 procedure has fundamental
+                limitations in this setting &mdash; single-scenario
+                identifiability, noise-sensitive derivative-based
+                formulations, and an inability to decouple
+                generator-internal damping from grid contributions. Our
+                framework resolves these issues with three contributions:
+                a differential damping technique that separates
+                generator damping from grid damping without isolating
+                the machine, a derivative-free state-consistency
+                optimisation that draws on 15 diverse excitation
+                scenarios, and a physics-based regularisation that
+                enforces PH structure so the identified model remains
+                compatible with Lyapunov-based stability certification.
+                We identified the eight key generator parameters
+                (<em>H</em>, <em>D</em>, <em>X<sub>d</sub></em>,
+                <em>X<sub>q</sub></em>, <em>X&prime;<sub>d</sub></em>,
+                <em>X&prime;<sub>q</sub></em>,
+                <em>T&prime;<sub>do</sub></em>,
+                <em>T&prime;<sub>qo</sub></em>) with errors between
+                1.26% and 9.10%, and validated the resulting model with
+                RMS rotor-angle errors below 1.2&deg; and speed errors
+                below 0.15% &mdash; accuracy sufficient for transient
+                stability analysis, passivity-based control design, and
+                oscillation damping assessment, using only standard
+                simulation tools and terminal measurements.
+              </p>
+
+              <p class="pub-pane__highlights-title">Highlights</p>
+              <ul class="pub-pane__highlights">
+                <li>Three-stage data-driven framework for
+                  Port-Hamiltonian (PH) parameter identification of
+                  synchronous generators.</li>
+                <li>Differential damping technique decouples
+                  generator-internal damping from grid contributions
+                  without isolating the machine.</li>
+                <li>Derivative-free state-consistency optimisation across
+                  15 diverse scenarios; physics-based regularisation
+                  preserves PH structure for Lyapunov-based stability
+                  certification.</li>
+                <li>Identifies 8 generator parameters with 1.26%&ndash;9.10%
+                  error; RMS rotor-angle error &lt;&nbsp;1.2&deg;, speed
+                  error &lt;&nbsp;0.15%.</li>
+              </ul>
+
+              <div class="item__gallery">
+                <img class="item__gallery-img" src="./images/Papers/Seventh/sensors-26-02024-g004-550.jpg" alt="Three-stage PH parameter identification framework" />
+                <img class="item__gallery-img" src="./images/Papers/Seventh/sensors-26-02024-g006-550.jpg" alt="Validation: rotor angle and speed accuracy across scenarios" />
+              </div>
+
               <a href="https://doi.org/10.3390/s26072024" target="_blank" class="publication__doi">DOI: 10.3390/s26072024</a>
             </div>
 
@@ -363,6 +686,53 @@
               <p class="pub-pane__title">Mitigating GFM-Induced Battery Stress with a VDCM-Controlled Hybrid Energy Storage</p>
               <p class="pub-pane__authors"><strong>R. Peykarporsan</strong>, A. E. Rabbi, T. T. Lie, M. Stommel, J. Watson</p>
               <p class="pub-pane__venue"><em>IEEE PES International Meeting (PES IM)</em> &middot; 2026</p>
+
+              <p class="pub-pane__summary">
+                In this work we propose a degradation-aware
+                voltage-dependent current management (VDCM) strategy for
+                a battery&ndash;supercapacitor hybrid energy storage
+                system (HESS) supporting a grid-forming (GFM) inverter.
+                The motivation is that as power systems become dominated
+                by inverter-based resources, GFM converters take on
+                stability duties that previously belonged to synchronous
+                machines &mdash; and the battery behind a GFM inverter
+                ends up exposed to high C-rates and severe current
+                fluctuations during faults and sudden load changes, which
+                accelerate degradation. The proposed VDCM strategy
+                exploits the complementary characteristics of the two
+                storage elements: the supercapacitor absorbs the fast
+                transients (its high power density and low ESR are well
+                suited to this role), while the battery handles the
+                slower, energy-dense portion of the load. Simulations
+                under a short-circuit fault and a sudden load change show
+                that the strategy regulates voltage and frequency,
+                significantly reduces both C-rate violations and
+                current-fluctuation stress on the battery, and slightly
+                improves GFM converter performance thanks to the
+                supercapacitor's lower equivalent series resistance.
+              </p>
+
+              <p class="pub-pane__highlights-title">Highlights</p>
+              <ul class="pub-pane__highlights">
+                <li>Degradation-aware VDCM strategy for a
+                  battery&ndash;supercapacitor HESS supporting a
+                  grid-forming (GFM) inverter.</li>
+                <li>Offloads rapid transients to the supercapacitor to
+                  mitigate battery C-rate violations and
+                  current-fluctuation stress.</li>
+                <li>Validated under short-circuit and sudden-load-change
+                  scenarios &mdash; voltage and frequency regulation
+                  preserved.</li>
+                <li>Side benefit: slightly improved GFM converter
+                  performance due to the supercapacitor's lower ESR.</li>
+              </ul>
+
+              <div class="item__gallery">
+                <img class="item__gallery-img" src="./images/Papers/eighth/peyka1-p5-peyka-small.gif" alt="GFM inverter with battery-supercapacitor HESS architecture" />
+                <img class="item__gallery-img" src="./images/Papers/eighth/peyka4-p5-peyka-small.gif" alt="VDCM control strategy splitting transient and steady-state power between battery and supercapacitor" />
+                <img class="item__gallery-img" src="./images/Papers/eighth/peyka6-p5-peyka-small.gif" alt="Battery current and voltage response under fault and load-change scenarios" />
+              </div>
+
               <a href="https://doi.org/10.1109/PESIM67009.2026.11438954" target="_blank" class="publication__doi">DOI: 10.1109/PESIM67009.2026.11438954</a>
             </div>
 
@@ -370,6 +740,49 @@
               <p class="pub-pane__title">Model order reduction for control and stability analysis of complex dynamical systems in a DC microgrid</p>
               <p class="pub-pane__authors"><strong>R. Peykarporsan</strong>, T. T. Lie, M. Stommel, J. Watson</p>
               <p class="pub-pane__venue"><em>IEEE Power &amp; Energy Society General Meeting (PESGM)</em> &middot; 2024</p>
+
+              <p class="pub-pane__summary">
+                In this work we study how to control a high-order complex
+                nonlinear system using a simpler reduced-order model,
+                with the goal of cutting computational and hardware
+                requirements without sacrificing performance. The
+                motivation is that controllers designed directly on
+                full-order models of complex dynamical systems are often
+                expensive to implement on real hardware, while a
+                reduced-order surrogate &mdash; if accurate enough
+                &mdash; lets us design simpler controllers that still
+                work on the original plant. We applied three classical
+                model-order reduction (MOR) techniques &mdash; modal
+                truncation, balanced truncation, and Hankel-norm
+                approximation &mdash; to a six-state nonlinear sample
+                system, reducing it to four states, and then designed
+                linear quadratic regulators (LQR) on each reduced model.
+                The LQR controllers were evaluated in MATLAB on the
+                original full-order system. The results show that the
+                Hankel-norm approximation outperforms the other MOR
+                methods on accuracy and robustness, and that an LQR
+                designed on the reduced model can be applied directly to
+                the original system without modification.
+              </p>
+
+              <p class="pub-pane__highlights-title">Highlights</p>
+              <ul class="pub-pane__highlights">
+                <li>Reduced-order modelling pipeline for designing LQR
+                  controllers on high-order nonlinear systems.</li>
+                <li>Compared three MOR methods: modal truncation,
+                  balanced truncation, and Hankel-norm approximation.</li>
+                <li>Six-state nonlinear sample system reduced to four
+                  states; LQR controllers tested on the original plant.</li>
+                <li>Hankel-norm approximation gave the best accuracy and
+                  robustness; the reduced-model LQR works directly on
+                  the full-order system without modification.</li>
+              </ul>
+
+              <div class="item__gallery">
+                <img class="item__gallery-img" src="./images/Papers/ninth/peyka1-p5-peyka-small%20(1).gif" alt="Six-state nonlinear sample system schematic" />
+                <img class="item__gallery-img" src="./images/Papers/ninth/peyka5-p5-peyka-small.gif" alt="LQR closed-loop response: full-order vs reduced-order MOR methods" />
+              </div>
+
               <a href="https://doi.org/10.1109/PESGM51994.2024.10689165" target="_blank" class="publication__doi">DOI: 10.1109/PESGM51994.2024.10689165</a>
             </div>
 
@@ -377,6 +790,47 @@
               <p class="pub-pane__title">State identification of DC microgrids using probabilistic methods in the presence of noise</p>
               <p class="pub-pane__authors">L. Kamyabi, <strong>R. Peykarporsan</strong>, T. T. Lie</p>
               <p class="pub-pane__venue"><em>IEEE PMAPS</em> &middot; 2024</p>
+
+              <p class="pub-pane__summary">
+                In this work we investigate three input-output system
+                identification methods &mdash; Balanced Proper Orthogonal
+                Decomposition (BPOD), the Eigensystem Realization
+                Algorithm (ERA), and Observer/Kalman Filter Identification
+                (OKID) &mdash; applied to a six-state DC microgrid
+                model. The motivation is that real-world deployment of
+                model-based control depends on identification methods
+                that remain robust when sensor measurements are noisy,
+                but evaluations in the literature often focus on
+                idealised conditions. We exposed the identification
+                process to noise during data collection in MATLAB and
+                compared the three methods under both clean and noisy
+                conditions. The results show that BPOD has the highest
+                noise tolerance in simulation but is constrained in
+                real-world deployment, whereas OKID strikes the best
+                balance of robustness and accuracy, making it the more
+                viable choice for practical system identification.
+              </p>
+
+              <p class="pub-pane__highlights-title">Highlights</p>
+              <ul class="pub-pane__highlights">
+                <li>Compared three input-output model identification
+                  methods (BPOD, ERA, OKID) on a six-state DC microgrid.</li>
+                <li>Identification process evaluated under both clean
+                  and noisy conditions to bridge simulation and
+                  real-world deployment.</li>
+                <li>BPOD showed the highest noise tolerance in
+                  simulation but has practical implementation
+                  constraints.</li>
+                <li>OKID delivered the best balance of robustness,
+                  accuracy, and real-world viability.</li>
+              </ul>
+
+              <div class="item__gallery">
+                <img class="item__gallery-img" src="./images/Papers/Tenth/kamya1-p6-kamya-large.gif" alt="Six-state DC microgrid test system" />
+                <img class="item__gallery-img" src="./images/Papers/Tenth/kamya4-p6-kamya-small.gif" alt="Identification accuracy under clean conditions: BPOD vs ERA vs OKID" />
+                <img class="item__gallery-img" src="./images/Papers/Tenth/kamya5-p6-kamya-small.gif" alt="Identification accuracy under noisy conditions" />
+              </div>
+
               <a href="https://doi.org/10.1109/PMAPS61648.2024.10667324" target="_blank" class="publication__doi">DOI: 10.1109/PMAPS61648.2024.10667324</a>
             </div>
 
@@ -384,6 +838,53 @@
               <p class="pub-pane__title">A modified Class-D resonance inverter for operating in load-independent condition</p>
               <p class="pub-pane__authors"><strong>R. Peykarporsan</strong>, H. M. Kazemi, M. Aeini, E. Afjei</p>
               <p class="pub-pane__venue"><em>11th Power Electronics, Drive Systems, and Technologies Conference (PEDSTC)</em> &middot; 2020</p>
+
+              <p class="pub-pane__summary">
+                In this work we propose a modified Class-D resonant
+                inverter topology that maintains zero-current switching
+                (ZCS) under wide load variations. The motivation is
+                well-known in resonant power electronics: the resonant
+                frequency depends on the load, so when the load changes
+                the circuit drifts between inductive and capacitive
+                operation, the switch current ends up either lagging or
+                leading, and the soft-switching property &mdash; the
+                whole reason to choose a resonant topology in the first
+                place &mdash; is lost. We add an auxiliary circuit to a
+                Class-D power stage that decouples the switch current
+                from the load, so ZCS is preserved across the entire
+                operating range. The detailed simulations confirm the
+                behaviour: at the IGBT switching instants,
+                d<em>i</em>/d<em>t</em> drops from a theoretically
+                unbounded value to about 10<sup>6</sup>&nbsp;A/s, placing
+                the switches firmly in the soft-switching zone, with
+                strong performance demonstrated at both light- and
+                heavy-load extremes &mdash; a truly load-independent
+                resonant inverter that also reduces fabrication cost,
+                total losses, and converter size.
+              </p>
+
+              <p class="pub-pane__highlights-title">Highlights</p>
+              <ul class="pub-pane__highlights">
+                <li>Modified Class-D resonant inverter topology that
+                  maintains zero-current switching (ZCS) under wide
+                  load variation.</li>
+                <li>Auxiliary circuit decouples the switch current from
+                  the load, eliminating the load-dependence limitation
+                  of standard resonant inverters.</li>
+                <li>Simulation: d<em>i</em>/d<em>t</em> at IGBT
+                  switching reduced from an unbounded value to
+                  ~10<sup>6</sup>&nbsp;A/s, placing switches in the
+                  soft-switching zone.</li>
+                <li>Lower fabrication cost, reduced total losses, smaller
+                  converter footprint; verified under both light- and
+                  heavy-load conditions.</li>
+              </ul>
+
+              <div class="item__gallery">
+                <img class="item__gallery-img" src="./images/Papers/Eleventh/p130-fig-1-source-small.gif" alt="Proposed modified Class-D resonant inverter topology with auxiliary circuit" />
+                <img class="item__gallery-img" src="./images/Papers/Eleventh/p130-fig-7-source-small.gif" alt="Switch waveforms showing zero-current switching across load conditions" />
+              </div>
+
               <a href="https://doi.org/10.1109/PEDSTC49159.2020.9088381" target="_blank" class="publication__doi">DOI: 10.1109/PEDSTC49159.2020.9088381</a>
             </div>
 
