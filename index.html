@@ -58,7 +58,7 @@
           <span>Rasool Peykarporsan</span>
         </h1>
         <!-- Put a small paragraph about yourself -->
-        <p>A PHD Candidate in Electrical Power Electronics and Power Systems based in Auckland, New Zealand.</p>
+        <p>PhD candidate at Auckland University of Technology in New Zealand, working at the intersection of power electronics, hardware design, control and machine learning for power systems. From soft-switching converters and PCB bring-up to real-time HIL validation, physics-informed ML, and Python&nbsp;/&nbsp;C++ tooling and C embedded programming. I build the analog, digital, and software side of the systems I research.</p>
         <a href="#contact" class="btn btn--pink">Get in touch</a>
       </div>
     </div>
@@ -87,7 +87,7 @@
               <span class="split-panel__nav-meta">Python &middot; MATLAB &middot; PowerFactory</span>
             </li>
             <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="proj-1" aria-selected="false" aria-controls="proj-1">
-              <span class="split-panel__nav-title">PIGNN &mdash; Physics-Informed Graph Neural Networks</span>
+              <span class="split-panel__nav-title">PIGNN &mdash; A Digital Twin Candidate for Power System</span>
               <span class="split-panel__nav-meta">Python</span>
             </li>
             <li class="split-panel__nav-item" role="tab" tabindex="0" data-pane="proj-4" aria-selected="false" aria-controls="proj-4">
@@ -112,13 +112,20 @@
 
             <div class="split-panel__pane is-active" id="proj-0" role="tabpanel">
               <h3 class="split-panel__pane-title">PHPS &mdash; Port-Hamiltonian Power System Simulator</h3>
-              <p>A power system transient stability simulator that compiles JSON network
-                descriptions into native C++ DAE solvers. Each grid component declares
-                its own states, ports, parameters, and dynamics; the resulting system is
-                integrated with SUNDIALS IDA at native speed &mdash; no Python overhead
-                during simulation.</p>
+              <p>PHPS is a power system simulator with built-in
+                transient stability features. The core idea is based on
+                Lyapunov theory that is the superior approach in stability analysis, but
+                finding a general Lyapunov function is the main
+                challenge. PHPS addresses this by
+                providing the Lyapunov function at every step of the
+                simulation so that stability can be quantified across arbitrary grid topologies under study.
+                The interface is written in Python for
+                flexibility, with a Python-to-C++ translation layer to
+                keep the solver fast. PHPS is publicly available, so
+                users can design their own components, simulate them
+                and conduct stability assessment.</p>
               <ul class="item__tags">
-                <li>Python</li><li>C++17</li><li>SUNDIALS IDA</li><li>Port-Hamiltonian</li>
+                <li>Python</li><li>C++</li><li>Port-Hamiltonian</li><li>End-to-end engineering</li><li>Self-directed</li>
               </ul>
               <div class="item__gallery">
                 <img class="item__gallery-img" src="./images/Projects/PHPS.svg" alt="PHPS system diagram" />
@@ -130,13 +137,22 @@
 
             <div class="split-panel__pane" id="proj-3" role="tabpanel">
               <h3 class="split-panel__pane-title">Microgrid Hardware Testbed</h3>
-              <p>A collection of Altium Designer PCBs forming a modular, sensor-rich
-                microgrid testbed: an isolated Buck converter, three- and four-leg
-                voltage source converters, a Neutral Point Clamped inverter, and a
-                line-commutated converter. Each board carries onboard current sensing
-                and an I2C/SPI link to an external MCU controller.</p>
+              <p>The Microgrid Hardware Testbed is a modular set of
+                converters and inverters commonly used
+                in a microgrid, isolated Buck converter, three- and
+                four-leg voltage source converters, a Neutral Point
+                Clamped inverter, and a line-commutated converter. This project is providing 
+                a flexible test bench for evaluating control scenarios and benchmarking
+                a wide range of control algorithms, from model-based to
+                model-free and ai-based, under realistic operating conditions.
+                Every board is sensor-rich with built-in
+                ADCs, so any microcontroller with an SPI/I2C interface
+                can drive it. The testbed now serves as a shared
+                platform in the lab for control development,
+                characterisation, and validation across the converter
+                family.</p>
               <ul class="item__tags">
-                <li>PCB Design</li><li>Power Electronics</li><li>Embedded Sensing</li>
+                <li>Altium Designer</li><li>PCB Design</li><li>Power Electronics</li><li>Analog &amp; Digital Design</li><li>Hardware Prototyping</li>
               </ul>
               <div class="item__gallery">
                 <img class="item__gallery-img" src="./images/Projects/Buck_Converter.jpg" alt="Buck converter hardware board" />
@@ -148,13 +164,21 @@
 
             <div class="split-panel__pane" id="proj-2" role="tabpanel">
               <h3 class="split-panel__pane-title">TCP PowerFactory-MATLAB-Python Bridge</h3>
-              <p>A co-simulation framework that links DIgSILENT PowerFactory,
-                MATLAB/Simulink, and Python through a TCP-based communication layer.
-                The project enables concurrent simulation workflows where control,
-                system studies, and data exchange run in sync across tools for
-                rapid prototyping and validation.</p>
+              <p>The TCP PowerFactory-MATLAB-Python Bridge is a
+                co-simulation framework I developed to link DIgSILENT
+                PowerFactory, MATLAB/Simulink, and any TCP-capable
+                client (Python by default) into a single synchronised
+                simulation loop. Although these simulation tools, PowerFactory and MATLAB, provide
+                some limited Python interface, no already existing solution
+                allows users to employ well-developed libraries and packages in
+                Python, or any other software in control system and Machine Learning while working with these simulation tools.
+                This TCP interface bridge the gap by handling the
+                synchronisation, data exchange, so any third party software, that
+                communicates over TCP, can drive the controller or do system 
+                assessment while simulation is running on those simulation tools.
+              </p>
               <ul class="item__tags">
-                <li>PowerFactory</li><li>MATLAB/Simulink</li><li>Python</li><li>TCP</li>
+                <li>Python</li><li>MATLAB / Simulink</li><li>DIgSILENT PowerFactory</li><li>Co-Simulation</li><li>TCP Communication</li><li>System-Level Integration</li><li>Control Algorithms</li><li>Machine Learning</li>
               </ul>
               <div class="item__gallery">
                 <img class="item__gallery-img" src="./images/Projects/PowerFactory.svg" alt="PowerFactory integration diagram" />
@@ -164,14 +188,18 @@
             </div>
 
             <div class="split-panel__pane" id="proj-1" role="tabpanel">
-              <h3 class="split-panel__pane-title">PIGNN &mdash; Physics-Informed Graph Neural Networks</h3>
-              <p>A research framework that augments physics-based grid models with
-                learnable correction terms inside a graph neural network. Multi-phase
-                grids are encoded as graphs and trained to capture parasitics and
-                unmodeled dynamics while preserving energy conservation, power balance,
-                and stability guarantees.</p>
+              <h3 class="split-panel__pane-title">PIGNN &mdash; A Digital Twin Candidate for Power System</h3>
+              <p>PIGNN is a graph-neural-network representation of a
+                power system that acts as a digital twin, capturing the
+                grid's intrinsic characteristics inside a learnable
+                model. Physics-based models cannot capture every effect
+                on a real grid, while pure ML models ignore the physics
+                we already know. PIGNN combines both: the grid topology
+                and equations are encoded into the GNN, and a learnable
+                part adapts to component wear and operational
+                changes.</p>
               <ul class="item__tags">
-                <li>PyTorch</li><li>Graph Neural Networks</li><li>Physics-Informed ML</li>
+                <li>Python</li><li>PyTorch</li><li>Graph Neural Networks</li><li>Physics-Informed ML</li><li>Digital Twin</li><li>System Modelling</li>
               </ul>
               <div class="item__gallery">
                 <img class="item__gallery-img" src="./images/Projects/3Ph_GNN.png" alt="Three-phase graph neural network architecture" />
@@ -188,7 +216,7 @@
                 sensitivities, builds Y-matrices from impedance data, and stores
                 everything as structured HDF5 for downstream analysis.</p>
               <ul class="item__tags">
-                <li>Python</li><li>PowerFactory</li><li>HDF5</li><li>Power Systems</li>
+                <li>Python</li><li>DIgSILENT PowerFactory</li><li>HDF5</li><li>Power Systems</li><li>Failure Analysis</li><li>Design of Experiments</li><li>System-Level Analysis</li>
               </ul>
               <div class="item__gallery">
                 <img class="item__gallery-img" src="./images/Projects/Contingency.svg" alt="Contingency analysis pipeline diagram" />
@@ -199,11 +227,12 @@
             <div class="split-panel__pane" id="proj-5" role="tabpanel">
               <h3 class="split-panel__pane-title">Fault Classification with Deep Learning</h3>
               <p>Deep learning models for fault detection and diagnosis in four-leg
-                inverters. The companion dataset is published on Kaggle as
-                <em>four-leg inverter fault detection</em>. This work underpins the
-                IEEE KPEC 2023 paper on the same topic.</p>
+                inverters. The companion dataset is published on
+                <a href="https://www.kaggle.com/datasets/rasoolpeykar/four-leg-inverter-fault-detection/data" target="_blank" style="color: var(--pink); text-decoration: underline;">Kaggle</a>
+                as <em>four-leg inverter fault detection</em>. This work published in the International Journal of Electrical Power & Energy Systems.
+              </p>
               <ul class="item__tags">
-                <li>TensorFlow / Keras</li><li>Power Electronics</li><li>Fault Diagnosis</li>
+                <li>Python</li><li>TensorFlow / Keras</li><li>Deep Learning</li><li>Power Electronics</li><li>Fault Diagnosis</li><li>Failure Analysis</li>
               </ul>
               <div class="item__gallery">
                 <img class="item__gallery-img" src="./images/Projects/Fault1.jpg" alt="Per-switch fault feature embedding (8 switches) in 3D and 2D projections" />
@@ -214,12 +243,18 @@
 
             <div class="split-panel__pane" id="proj-6" role="tabpanel">
               <h3 class="split-panel__pane-title">Reinforcement Learning on Python-MATLAB TCP Bridge</h3>
-              <p>An earlier prototype that runs a Simulink model as a reinforcement
-                learning environment and synchronously streams state and actions
-                between Simulink and Python over TCP. Predecessor to the parallel
-                DDPG framework above.</p>
+              <p>This project applies the TCP bridge to reinforcement
+                learning, using a Simulink model as the RL environment
+                and a Python agent that exchanges state and actions over
+                TCP. To shorten the long training times that come with
+                RL, Python's multiprocessing and multithreading options
+                were tested side by side, and multiple training
+                instances were run in parallel against separate Simulink
+                workers. The parallel setup brought training time down
+                by an order of magnitude compared with single-threaded
+                runs.</p>
               <ul class="item__tags">
-                <li>MATLAB Engine</li><li>Simulink</li><li>TCP</li><li>RL</li>
+                <li>MATLAB Engine</li><li>Simulink</li><li>TCP</li><li>RL</li><li>Parallel Computing</li><li>Parallel AI Training</li>
               </ul>
               <div class="item__gallery">
                 <img class="item__gallery-img" src="./images/Projects/RL1.svg" alt="RL Python-MATLAB TCP bridge architecture" />
@@ -230,11 +265,15 @@
 
             <div class="split-panel__pane" id="proj-7" role="tabpanel">
               <h3 class="split-panel__pane-title">Neovim Config (LazyVim + LaTeX + Obsidian)</h3>
-              <p>A personal Neovim setup based on LazyVim with plugins for LaTeX
-                authoring, Obsidian note-taking, and GitHub Copilot. Includes the
-                Zathura PDF viewer config used as the LaTeX preview target.</p>
+              <p>This project is my personal Neovim setup based on
+                LazyVim, with plugins for LaTeX authoring, Obsidian
+                note-taking, GitHub Copilot, and Zathura wired in as
+                the LaTeX preview target. Configuring it from scratch
+                in Lua became the development environment I use every
+                day, and it is the kind of side project I keep coming
+                back to whenever I want to learn a new tool.</p>
               <ul class="item__tags">
-                <li>Neovim</li><li>LazyVim</li><li>LaTeX</li><li>Obsidian</li>
+                <li>Neovim</li><li>LazyVim</li><li>Lua</li><li>LaTeX</li><li>Obsidian</li><li>Self-Motivated</li><li>Tech Enthusiasm</li>
               </ul>
               <div class="item__gallery">
                 <img class="item__gallery-img" src="./images/Projects/NVim1.png" alt="Neovim editing session" />

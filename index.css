@@ -448,7 +448,8 @@ body:not(.user-is-tabbing) a:focus {
     margin: 1.5rem 0 3.5rem;
     max-width: var(--container-medium-width);
     font-family: 'Jost', sans-serif;
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-small);
+    line-height: 1.6;
 }
 
 @media(max-width: 500px) {
