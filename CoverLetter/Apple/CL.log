@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.17)  28 APR 2026 18:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.17)  28 APR 2026 20:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -423,46 +423,27 @@ Package hyperref Info: Link coloring OFF on input line 96.
 
 \c@mv@tabular=\count284
 \c@mv@boldtabular=\count285
-LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
-nput line 102.
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on i
+nput line 116.
 
-(c:/texlive/2023/texmf-dist/tex/latex/fontawesome5/ufontawesomefree1.fd)
+(c:/texlive/2023/texmf-dist/tex/latex/fontawesome5/ufontawesomefree2.fd)
 LaTeX Font Info:    Trying to load font information for T1+FiraMono-TLF on inpu
-t line 102.
+t line 116.
 
 (c:/texlive/2023/texmf-dist/tex/latex/fira/T1FiraMono-TLF.fd
 File: T1FiraMono-TLF.fd 2019/10/10 (autoinst) Font definitions for T1/FiraMono-
 TLF.
 )
-LaTeX Font Info:    Font shape `T1/FiraMono-TLF/m/n' in size <10> not available
-
+LaTeX Font Info:    Font shape `T1/FiraMono-TLF/m/n' in size <10.95> not availa
+ble
 (Font)              Font shape `T1/FiraMono-TLF/regular/n' tried instead on inp
-ut line 102.
+ut line 116.
 LaTeX Font Info:    Font shape `T1/FiraMono-TLF/regular/n' will be
-(Font)              scaled to size 8.99994pt on input line 102.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 102.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 102.
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 10
-2.
+(Font)              scaled to size 9.85492pt on input line 116.
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
+nput line 117.
 
-(c:/texlive/2023/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on i
-nput line 103.
-
-(c:/texlive/2023/texmf-dist/tex/latex/fontawesome5/ufontawesomefree2.fd)
-LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on
- input line 105.
-
-(c:/texlive/2023/texmf-dist/tex/latex/fontawesome5/ufontawesomebrands0.fd)
-LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <10> not 
-available
-(Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
-n input line 105.
-
+(c:/texlive/2023/texmf-dist/tex/latex/fontawesome5/ufontawesomefree1.fd)
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 4.08003pt, for example:
@@ -472,31 +453,27 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 {c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2023/
 texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}{c:/texlive/2023/texmf-dist/fonts/
-enc/dvips/fontawesome5/fa5free1.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips
+enc/dvips/fontawesome5/fa5free2.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips
 /fira/fir_i3ioen.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/fontawesome5/f
-a5free2.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0
-.enc}] (./CL.aux)
+a5free1.enc}] (./CL.aux)
 Package rerunfilecheck Info: File `CL.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14553 strings out of 476025
- 253719 string characters out of 5794015
- 1865382 words of memory out of 5000000
- 34798 multiletter control sequences out of 15000+600000
- 526411 words of font info for 46 fonts, out of 8000000 for 9000
+ 14512 strings out of 476025
+ 252745 string characters out of 5794015
+ 1864382 words of memory out of 5000000
+ 34769 multiletter control sequences out of 15000+600000
+ 516925 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,76p,970b,474s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/fira/FiraMono-Regular.pfb><c:/
-texlive/2023/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regu
-lar.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome
-5Free-Solid.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb><c:/tex
-live/2023/texmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb>
-Output written on CL.pdf (1 page, 128170 bytes).
+texlive/2023/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.
+pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb>
+Output written on CL.pdf (1 page, 65039 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 36 PDF objects out of 1000 (max. 8388607)
+ 25 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
