@@ -733,6 +733,49 @@ body:not(.user-is-tabbing) a:focus {
 
 
 /* --------------------------------------- */
+/* ----- Education & Experience ----- */
+/* --------------------------------------- */
+
+.education__timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter-medium);
+    max-width: 80rem;
+}
+
+.education__item {
+    border-left: 3px solid var(--pink);
+    padding-left: 2rem;
+}
+
+.education__date {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--pink);
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.education__role {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 0 0.3rem;
+}
+
+.education__place {
+    font-size: 1.5rem;
+    opacity: 0.8;
+    margin: 0 0 0.4rem;
+}
+
+.education__note {
+    font-size: 1.4rem;
+    opacity: 0.7;
+    margin: 0;
+}
+
+/* --------------------------------------- */
 /* ----- Skills ----- */
 /* --------------------------------------- */
 
