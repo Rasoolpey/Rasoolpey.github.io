@@ -280,6 +280,34 @@ body:not(.user-is-tabbing) a:focus {
     background: transparent;
 }
 
+.header__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.header__social-links {
+    display: flex;
+    list-style: none;
+    gap: 1.8rem;
+    margin-top: 3.5rem;
+    padding: 0;
+}
+
+.header__social-icon {
+    height: 4rem;
+    transition: opacity 0.2s;
+}
+
+.header__social-icon--invert {
+    filter: brightness(0) invert(1);
+}
+
+.header__social-icon:hover {
+    opacity: 0.7;
+}
+
 .link__text {
     position: relative;
     display: inline-block;
@@ -865,29 +893,43 @@ body:not(.user-is-tabbing) a:focus {
 
 .about__content {
     display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
+    flex-direction: column;
 }
 
-@media(max-width: 900px) {
-    .about__content {
-        flex-direction: column-reverse;
-        align-items: initial;
-    }
+.about__top {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--gutter-medium);
 }
 
 .about__photo-container {
-    margin-bottom: var(--gutter-normal);
+    flex: 0 0 52rem;
+    max-width: 52rem;
 }
 
-@media(min-width: 901px) {
-    .about__text {
-        flex: 0 0 35%;
+.about__photo {
+    width: 100%;
+    display: block;
+}
+
+.about__text {
+    flex: 1;
+    padding-top: 6rem;
+}
+
+.about__tags {
+    margin-top: var(--gutter-normal);
+}
+
+@media(max-width: 900px) {
+    .about__top {
+        flex-direction: column;
     }
 
     .about__photo-container {
-        flex: 1;
-        margin: 0 var(--gutter-huge) 0 0;
+        flex: none;
+        max-width: 100%;
     }
 }
 
@@ -917,6 +959,33 @@ body:not(.user-is-tabbing) a:focus {
 
 .contact__info {
     max-width: var(--container-medium-width);
+}
+
+.contact__links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    margin-top: 2rem;
+}
+
+.contact__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: var(--font-size-small);
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact__link:hover {
+    color: var(--pink);
+}
+
+.contact__link-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    flex-shrink: 0;
 }
 
 /* --------------------------------------- */
