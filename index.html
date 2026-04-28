@@ -44,7 +44,7 @@
           <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
           <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
           <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
+            <a href="#about" class="nav__link">Beyond Work</a>
           </li>
           <li class="nav__item">
             <a href="#contact" class="nav__link">Contact</a>
@@ -60,7 +60,32 @@
         </h1>
         <!-- Put a small paragraph about yourself -->
         <p>PhD candidate at Auckland University of Technology in New Zealand, working at the intersection of power electronics, hardware design, control and machine learning for power systems. From soft-switching converters and PCB bring-up to real-time HIL validation, physics-informed ML, and Python&nbsp;/&nbsp;C++ tooling and C embedded programming. I build the analog, digital, and software side of the systems I research.</p>
-        <a href="#contact" class="btn btn--pink">Get in touch</a>
+        <div class="header__btns">
+          <a href="#contact" class="btn btn--pink">Get in touch</a>
+          <a href="./Rasool peykarporsan.pdf" target="_blank" class="btn">My Resume</a>
+        </div>
+        <ul class="header__social-links">
+          <li>
+            <a href="https://github.com/Rasoolpey" target="_blank" title="GitHub">
+              <img src="./images/github.svg" class="header__social-icon" alt="GitHub">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/rasool-peykarporsan-42a25580/" target="_blank" title="LinkedIn">
+              <img src="./images/linkedin.svg" class="header__social-icon" alt="LinkedIn">
+            </a>
+          </li>
+          <li>
+            <a href="https://orcid.org/0009-0006-5237-3847" target="_blank" title="ORCID">
+              <img src="./images/ORCID_iD.svg.png" class="header__social-icon" alt="ORCID">
+            </a>
+          </li>
+          <li>
+            <a href="https://scholar.google.com/citations?hl=en&user=AWOKpCAAAAAJ" target="_blank" title="Google Scholar">
+              <img src="./images/Google_Scholar_logo.svg.png" class="header__social-icon" alt="Google Scholar">
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </header>
@@ -1103,34 +1128,20 @@
 
     <section class="about" id="about">
       <div class="row">
-        <h2>About Me</h2>
+        <h2>Beyond Work</h2>
         <div class="about__content">
-          <div class="about__text">
-            <p>
-              I'm a PhD candidate at <strong>Auckland University of Technology</strong>
-              working across power electronics hardware, control theory, and machine
-              learning for power systems. I'm also the founder of
-              <strong>Circuit Intelligent</strong>, an AI-assisted circuit-design
-              platform pairing classical EDA workflows with LLM-driven guidance to
-              shorten the path from design intent to a working schematic.
-            </p>
-            <!-- TODO: link your CV/resume PDF here -->
-            <a href="#" class="btn">My Resume</a>
+          <div class="about__top">
+            <div class="about__photo-container">
+              <img class="about__photo" src="./images/Rasool.jpg" alt="Rasool" />
+            </div>
+            <div class="about__text">
+              <p>When I'm not in the lab you'll find me hiking <img src="./images/Hobbies/Hicking.svg" class="hobby-icon" alt="hiking">, mountain
+                climbing <img src="./images/Hobbies/Mountain.svg" class="hobby-icon" alt="mountain climbing">, cycling <img src="./images/Hobbies/bike.svg" class="hobby-icon" alt="cycling">, or camping <img src="./images/Hobbies/tent.svg" class="hobby-icon" alt="camping"> somewhere in the New Zealand bush <img src="./images/Hobbies/tree.svg" class="hobby-icon" alt="bush">. Off
+                the trail I cook <img src="./images/Hobbies/cook.svg" class="hobby-icon" alt="cooking">, shoot photos <img src="./images/Hobbies/Camera.svg" class="hobby-icon" alt="photography">, and play electric lead
+                guitar <img src="./images/Hobbies/Guitar.svg" class="hobby-icon" alt="guitar">; I love metal <img src="./images/Hobbies/Metal.svg" class="hobby-icon" alt="metal"> genre.</p>
+            </div>
           </div>
-
-          <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/Rasool.jpg" alt="Rasool" />
-          </div>
-        </div>
-
-        <div class="about__beyond">
-          <h3>Beyond Work</h3>
-          <p>When I'm not in the lab you'll find me hiking <img src="./images/Hobbies/Hicking.svg" class="hobby-icon" alt="hiking">, mountain
-            climbing <img src="./images/Hobbies/Mountain.svg" class="hobby-icon" alt="mountain climbing">, cycling <img src="./images/Hobbies/bike.svg" class="hobby-icon" alt="cycling">, or camping <img src="./images/Hobbies/tent.svg" class="hobby-icon" alt="camping"> somewhere in the New Zealand bush <img src="./images/Hobbies/tree.svg" class="hobby-icon" alt="bush">. Off
-            the trail I cook <img src="./images/Hobbies/cook.svg" class="hobby-icon" alt="cooking">, shoot photos <img src="./images/Hobbies/Camera.svg" class="hobby-icon" alt="photography">, and play electric lead
-            guitar <img src="./images/Hobbies/Guitar.svg" class="hobby-icon" alt="guitar">; I love metal <img src="./images/Hobbies/Metal.svg" class="hobby-icon" alt="metal"> genre.</p>
-          <ul class="item__tags">
+          <ul class="item__tags about__tags">
             <li>Hiking</li>
             <li>Mountain climbing</li>
             <li>Cycling</li>
@@ -1153,10 +1164,26 @@
       <div class="contact__info">
         <p>
           I'm always open to discussions on power electronics, microgrid control,
-          machine learning for power systems, or research collaborations. The
-          quickest way to reach me is by email.
+          machine learning for power systems, or research collaborations.
         </p>
-        <a href="mailto:Rasool.peykarporsan@gmail.com" class="btn">Rasool.peykarporsan@gmail.com</a>
+        <div class="contact__links">
+          <a href="mailto:Rasool.peykarporsan@gmail.com" class="contact__link">
+            <svg class="contact__link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+            Rasool.peykarporsan@gmail.com
+          </a>
+          <a href="tel:+642902355104" class="contact__link">
+            <svg class="contact__link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg>
+            +64 29 023 55104
+          </a>
+          <a href="https://t.me/rasoulp2" target="_blank" class="contact__link">
+            <img src="./images/telegram.svg" class="contact__link-icon" alt="Telegram">
+            Telegram
+          </a>
+          <a href="https://wa.me/642902355104" target="_blank" class="contact__link">
+            <img src="./images/whatsapp.svg" class="contact__link-icon" alt="WhatsApp">
+            WhatsApp
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -1166,6 +1193,16 @@
   <footer role="contentinfo" class="footer">
     <div class="row">
       <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://t.me/rasoulp2" target="_blank" title="Telegram">
+            <img src="./images/telegram.svg" class="footer__social-image" alt="Telegram">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://wa.me/642902355104" target="_blank" title="WhatsApp">
+            <img src="./images/whatsapp.svg" class="footer__social-image" alt="WhatsApp">
+          </a>
+        </li>
         <li class="footer__social-link-item">
           <a href="https://github.com/Rasoolpey" target="_blank" title="GitHub Profile">
             <img src="./images/github.svg" class="footer__social-image" alt="GitHub">
