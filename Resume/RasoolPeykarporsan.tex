@@ -1,0 +1,281 @@
+%-------------------------
+% Resume in Latex
+% Rasool Peykarporsan
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage[scale=0.90,lf]{FiraMono}
+
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+    \bfseries \vspace{2pt} \raggedright \large
+}{}{0em}{}[\color{light-grey}{\titlerule[2pt]} \vspace{-4pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-1pt}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\
+      \textit{#3} & {\color{dark-grey}\small #4}\\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}\small #2} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Rasool Peykarporsan} \\ \vspace{5pt}
+    \small
+    \faGlobe \hspace{2pt} \href{https://rasoolpeykarporsan.me/}{\texttt{rasoolpeykarporsan.me}} \hspace{1pt} $|$
+    \hspace{1pt} \faPhone* \hspace{1pt} \texttt{+64 29 023 55104} \hspace{1pt} $|$
+    \hspace{1pt} \faEnvelope \hspace{2pt} \href{mailto:Rasool.peykarporsan@gmail.com}{\texttt{Rasool.peykarporsan@gmail.com}} \\
+    \faGithub \hspace{2pt} \href{https://github.com/Rasoolpey}{\texttt{Rasoolpey}} \hspace{1pt} $|$
+    \hspace{1pt} \faGraduationCap \hspace{2pt} \href{https://scholar.google.com/citations?user=AWOKpCAAAAAJ}{\texttt{Google Scholar}} \hspace{1pt} $|$
+    \hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{Auckland, New Zealand}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------ABOUT ME-----------
+\section{ABOUT ME}
+My journey through a B.Sc. and M.Sc. in Electrical Engineering gave me a solid foundation in analog and digital circuit design, power electronics, control theory, PCB layout, and embedded C/C++. 
+Pursuing a PhD at Auckland University of Technology then further strengthened that foundation: 
+I learned to see every design from multiple angles, question assumptions, and build reliable solutions that actually stand up to rigorous testing. 
+That process also shaped the engineer I am today, someone who picks up new topics quickly, stays self-motivated through long and uncertain projects, and genuinely enjoys working in a collaborative team where every member can grow and contribute. 
+I am currently seeking an internship where I can apply my technical knowledge and hands-on, problem-solving mindset to advanced wireless power and circuit design challenges at Apple.
+
+%-----------TECHNICAL SKILLS-----------
+\section{TECHNICAL SKILLS}
+\begin{itemize}[leftmargin=0in, label={}]
+  \small{\item{
+    \textbf{Power Electronics \& Hardware}{: Direct wireless charging, resonant \& soft-switching converters (LLC, Class-D), analog \& digital circuit design, PCB layout (Altium, OrCAD)}\vspace{2pt} \\
+    \textbf{Circuit Simulation \& Modelling}{: Cadence, ADS, LTspice, MATLAB/Simulink, circuit-level simulation, system-level impedance \& loop-gain shaping}\vspace{2pt} \\
+    \textbf{Instrumentation \& Testing}{: Impedance analyser, Virtual Network Analyser (VNA), oscilloscopes, OPAL-RT, dSPACE, STM32F4/F7, Texas Instruments C2000, failure analysis, root cause \& corrective action, DOE creation \& execution}\vspace{2pt} \\
+    \textbf{Prototyping \& Validation}{: Hands-on experience (soldering, circuit measurement, hardware prototyping), system bring-up, characterisation, factory data collection support}\vspace{2pt} \\
+    \textbf{Programming \& Scripting}{: Python, MATLAB, C, C++, embedded programming, Verilog/HDL}\vspace{2pt} \\
+    \textbf{Data \& Statistical Analysis}{: Statistical tools (MATLAB), validation data analysis, PyTorch, Reinforcement Learning, ML-driven fault classification}
+  }}
+\end{itemize}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Auckland University of Technology (AUT)}{2023 -- present}
+      {PhD --- Power Electronics \& Power Systems}{Auckland, New Zealand}
+
+    \resumeSubheading
+      {Shahid Beheshti University (top 5 in Iran)}{2016 -- 2019}
+      {M.Sc. --- Power Electronics \& Electric Machines Engineering}{Tehran, Iran}
+
+    \resumeSubheading
+      {Ferdowsi University of Mashhad (top 10 in Iran)}{2011 -- 2015}
+      {B.Sc. --- Electrical Power Engineering}{Mashhad, Iran}
+
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Auckland University of Technology}{2023 -- present}
+      {PhD Researcher \& Teaching Assistant}{Auckland, New Zealand}
+      \resumeItemListStart
+        \resumeItem{Teaching Assistant across undergraduate and postgraduate courses: Power Systems, Power Electronics, Renewable Energy Resources.}
+        \resumeItem{\textbf{Supervised 18 students}: 5 final-year theses and 13 semester research projects.}
+        \resumeItem{Peer Mentor for bachelor's, master's, and PhD students (AUT Peer Mentoring Programme).}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Circuit Intelligent}{2025 -- present}
+      {Founder}{Auckland, New Zealand}
+      \resumeItemListStart
+        \resumeItem{Founded an AI-assisted circuit-design platform pairing classical EDA workflows with LLM-driven guidance to shorten the path from design intent to a working schematic.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Khorasan Steel Complex}{2022 -- 2023}
+      {Electrical Engineer, R\&D}{Iran}
+      \resumeItemListStart
+        \resumeItem{R\&D on Substation design and high-voltage infrastructure for plant expansion, and cathodic protection for pipeline and structural assets.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PUBLICATIONS (SELECTED)----------
+\section{SELECTED PUBLICATIONS}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{Intelligent Fractional-Order Cascade Control for Wind Farms (DFIG)} $|$ \textit{IEEE Trans.\ Energy Convers.}}{2025}
+      \resumeItemListStart
+        \resumeItem{4DoF fractional-order cascade controller tuned by DDPG reinforcement learning; validated on a NZ wind farm.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Low-Voltage Solid-State DC Circuit Breaker (BiTriCap)} $|$ \textit{IEEE Trans.\ Power Electron.}}{2024}
+      \resumeItemListStart
+        \resumeItem{Novel bidirectional thyristor-capacitor suppressor; experimentally validated at 48 VDC / 8 A with only 2 V residual overvoltage.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Bidirectional Passive-Technique SSCB for LV Applications} $|$ \textit{IEEE JESTPE}}{2025}
+      \resumeItemListStart
+        \resumeItem{RCD-based passive SSCB: 20 \textmu s full interrupt, 90 \textmu s total fault clearing at 48 VDC / 10 A.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Hierarchical Transformer Fault Diagnosis for Four-Leg Inverters} $|$ \textit{IJEPES}}{2026}
+      \resumeItemListStart
+        \resumeItem{Two-level Transformer-based open/short-circuit switch fault classifier; dataset generated on OPAL-RT HIL.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Data-Driven Port-Hamiltonian Parameter ID of Synchronous Generators} $|$ \textit{Sensors}}{2026}
+      \resumeItemListStart
+        \resumeItem{Three-stage framework with differential damping decoupling; 8 parameters identified with 1.26--9.10\% error.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Model-Free Cyber-Attack Defence for Load Frequency Control} $|$ \textit{IET GTD}}{2026}
+      \resumeItemListStart
+        \resumeItem{DRL-tuned model-free observer detects and mitigates FDI attacks; validated in real time on OPAL-RT.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+  \vspace{2pt}
+  \small{Full list: \href{https://scholar.google.com/citations?user=AWOKpCAAAAAJ}{\myuline{Google Scholar}} \hspace{3pt} | \hspace{3pt} ORCID: \href{https://orcid.org/0009-0006-5237-3847}{\myuline{0009-0006-5237-3847}}}
+
+
+%-----------PROJECTS-----------
+\section{KEY PROJECTS}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+        {\textbf{PHPS --- Port-Hamiltonian Power System Simulator} $|$ \textit{Python, C++}}{github.com/Rasoolpey/PHPS}
+        \resumeItemListStart
+          \resumeItem{Transient stability simulator with built-in Lyapunov function at every simulation step; Python interface over a compiled C++ solver.}
+        \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{Microgrid Hardware Testbed} $|$ \textit{Altium Designer, PCB}}{github.com/Rasoolpey/Microgrid\_hardware\_description}
+        \resumeItemListStart
+          \resumeItem{Modular converter family (Buck, VSC, NPC, four-leg) designed end-to-end; sensor-rich boards with I2C/SPI ADCs serving as the lab's shared hardware platform.}
+        \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{TCP PF--MATLAB--Python Bridge} $|$ \textit{Python, MATLAB, PF}}{github.com/Rasoolpey/TCP-PowerFactory-Matlab-Python}
+        \resumeItemListStart
+          \resumeItem{Co-simulation framework synchronising DIgSILENT PowerFactory and MATLAB/Simulink with any TCP-capable client; enables ML and RL to drive live simulations.}
+        \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{PIGNN --- Physics-Informed GNN Digital Twin} $|$ \textit{Python, PyTorch}}{github.com/Rasoolpey/PIGNN}
+        \resumeItemListStart
+          \resumeItem{GNN that encodes grid topology and physics equations; learnable components adapt to wear and operational changes.}
+        \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+
+%-----------HONORS AND AWARDS-----------
+\section{HONORS \& AWARDS}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{MBIE FAN Project Doctoral Scholarship} $|$ \textit{Ministry of Business, Innovation and Employment (NZ)}}{2021}
+      \resumeItemListStart
+        \resumeItem{Awarded a fully-funded PhD scholarship as part of the MBIE FAN (Future Architecture of the Network) project.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------RECOMMENDATIONS-----------
+\section{REFERENCES}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Dr. [Supervisor Name]} $|$ \textit{PhD Supervisor, Auckland University of Technology} \\
+     \href{mailto:email@aut.ac.nz}{\myuline{email@aut.ac.nz}} \hspace{2pt} $|$ \hspace{2pt} \texttt{+64 [Phone Number]} \vspace{4pt} \\
+     \textbf{[Friend / Colleague Name]} $|$ \textit{[Job Title], [Company / University]} \\
+     \href{mailto:email@domain.com}{\myuline{email@domain.com}} \hspace{2pt} $|$ \hspace{2pt} \texttt{+64 [Phone Number]}
+    }}
+ \end{itemize}
+
+\end{document}
