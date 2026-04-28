@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.17)  28 APR 2026 20:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.17)  28 APR 2026 21:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -280,6 +280,38 @@ Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
 \TX@cols=\count274
 \TX@ftn=\toks23
 )
+(c:/texlive/2023/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2023/02/25 v3.4 ragged2e Package
+
+(c:/texlive/2023/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2022/03/08 v6.0d a miscellany of footnote facilities
+\FN@temptoken=\toks24
+\footnotemargin=\dimen159
+\@outputbox@depth=\dimen160
+Package footmisc Info: Declaring symbol style bringhurst on input line 695.
+Package footmisc Info: Declaring symbol style chicago on input line 703.
+Package footmisc Info: Declaring symbol style wiley on input line 712.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 723.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 743.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 764
+.
+)
+\CenteringLeftskip=\skip66
+\RaggedLeftLeftskip=\skip67
+\RaggedRightLeftskip=\skip68
+\CenteringRightskip=\skip69
+\RaggedLeftRightskip=\skip70
+\RaggedRightRightskip=\skip71
+\CenteringParfillskip=\skip72
+\RaggedLeftParfillskip=\skip73
+\RaggedRightParfillskip=\skip74
+\JustifyingParfillskip=\skip75
+\CenteringParindent=\skip76
+\RaggedLeftParindent=\skip77
+\RaggedRightParindent=\skip78
+\JustifyingParindent=\skip79
+)
 (c:/texlive/2023/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
 (c:/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2023-02-22 L3 programming layer (loader) 
@@ -317,8 +349,8 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
 (c:/texlive/2023/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (c:/texlive/2023/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks24
-\XKV@tempa@toks=\toks25
+\XKV@toks=\toks25
+\XKV@tempa@toks=\toks26
 )
 \XKV@depth=\count276
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
@@ -348,7 +380,7 @@ Package: contour 2004/11/18 v2.14 Print contoured text (HH, MH)
 (c:/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
-\con@length=\skip66
+\con@length=\skip80
 
 Loading configuration file `contour.cfg'.
 (c:/texlive/2023/texmf-dist/tex/latex/contour/contour.cfg
@@ -361,14 +393,14 @@ File: pdftex.cnt 2004/11/18 v2.14 Print contoured text (HH, MH)
 (c:/texlive/2023/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box56
 \UL@hyphenbox=\box57
-\UL@skip=\skip67
-\UL@hook=\toks26
-\UL@height=\dimen159
+\UL@skip=\skip81
+\UL@hook=\toks27
+\UL@height=\dimen161
 \UL@pe=\count277
-\UL@pixel=\dimen160
+\UL@pixel=\dimen162
 \ULC@box=\box58
 Package: ulem 2019/11/18
-\ULdepth=\dimen161
+\ULdepth=\dimen163
 )
 (c:/texlive/2023/texmf-dist/tex/latex/tex-gyre/tgheros.sty
 Package: tgheros 2009/09/27 v1.2 TeX Gyre Heros as default sans serif family
@@ -383,52 +415,53 @@ File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 )) (./CL.aux)
 \openout1 = `CL.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
 
 (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count278
-\scratchdimen=\dimen162
+\scratchdimen=\dimen164
 \scratchbox=\box59
 \nofMPsegments=\count279
 \nofMParguments=\count280
-\everyMPshowfont=\toks27
+\everyMPshowfont=\toks28
 \MPscratchCnt=\count281
-\MPscratchDim=\dimen163
+\MPscratchDim=\dimen165
 \MPnumerator=\count282
 \makeMPintoPDFobject=\count283
-\everyMPtoPDFconversion=\toks28
+\everyMPtoPDFconversion=\toks29
 )
-Package hyperref Info: Link coloring OFF on input line 96.
+Package hyperref Info: Link coloring OFF on input line 97.
  (./CL.out) (./CL.out)
 \@outlinefile=\write3
 \openout3 = `CL.out'.
 
+Package ragged2e Info: ABD: executing \RaggedRight on input line 97.
 \c@mv@tabular=\count284
 \c@mv@boldtabular=\count285
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on i
-nput line 116.
+nput line 118.
 
 (c:/texlive/2023/texmf-dist/tex/latex/fontawesome5/ufontawesomefree2.fd)
 LaTeX Font Info:    Trying to load font information for T1+FiraMono-TLF on inpu
-t line 116.
+t line 118.
 
 (c:/texlive/2023/texmf-dist/tex/latex/fira/T1FiraMono-TLF.fd
 File: T1FiraMono-TLF.fd 2019/10/10 (autoinst) Font definitions for T1/FiraMono-
@@ -437,11 +470,11 @@ TLF.
 LaTeX Font Info:    Font shape `T1/FiraMono-TLF/m/n' in size <10.95> not availa
 ble
 (Font)              Font shape `T1/FiraMono-TLF/regular/n' tried instead on inp
-ut line 116.
+ut line 118.
 LaTeX Font Info:    Font shape `T1/FiraMono-TLF/regular/n' will be
-(Font)              scaled to size 9.85492pt on input line 116.
+(Font)              scaled to size 9.85492pt on input line 118.
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
-nput line 117.
+nput line 119.
 
 (c:/texlive/2023/texmf-dist/tex/latex/fontawesome5/ufontawesomefree1.fd)
 
@@ -460,17 +493,17 @@ Package rerunfilecheck Info: File `CL.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14512 strings out of 476025
- 252745 string characters out of 5794015
- 1864382 words of memory out of 5000000
- 34769 multiletter control sequences out of 15000+600000
+ 14740 strings out of 476025
+ 257330 string characters out of 5794015
+ 1867382 words of memory out of 5000000
+ 34989 multiletter control sequences out of 15000+600000
  516925 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,76p,970b,474s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,76p,970b,468s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/fira/FiraMono-Regular.pfb><c:/
 texlive/2023/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.
 pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb>
-Output written on CL.pdf (1 page, 65039 bytes).
+Output written on CL.pdf (1 page, 64946 bytes).
 PDF statistics:
  36 PDF objects out of 1000 (max. 8388607)
  25 compressed objects within 1 object stream
