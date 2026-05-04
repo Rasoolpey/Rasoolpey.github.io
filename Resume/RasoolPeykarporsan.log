@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.17)  4 MAY 2026 13:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.17)  4 MAY 2026 14:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -503,13 +503,13 @@ Package rerunfilecheck Info: File `RasoolPeykarporsan.out' has not changed.
 (rerunfilecheck)             Checksum: 4D71FEEA382F5E66967DA447637FD434;870.
  ) 
 Here is how much of TeX's memory you used:
- 14665 strings out of 476025
- 255327 string characters out of 5794015
- 1879382 words of memory out of 5000000
- 34888 multiletter control sequences out of 15000+600000
- 547724 words of font info for 63 fonts, out of 8000000 for 9000
+ 14664 strings out of 476025
+ 255314 string characters out of 5794015
+ 1880382 words of memory out of 5000000
+ 34887 multiletter control sequences out of 15000+600000
+ 544727 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,76p,326b,608s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,76p,326b,725s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/fira/FiraMono-Regular.pfb><c:/
 texlive/2023/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regu
 lar.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome
@@ -518,7 +518,7 @@ lar.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome
 /texlive/2023/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb><c:/texlive/2023/
 texmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb><c:/texlive/2023/texmf-dist/fon
 ts/type1/public/tex-gyre/qhvri.pfb>
-Output written on RasoolPeykarporsan.pdf (2 pages, 168405 bytes).
+Output written on RasoolPeykarporsan.pdf (2 pages, 168251 bytes).
 PDF statistics:
  112 PDF objects out of 1000 (max. 8388607)
  89 compressed objects within 1 object stream
